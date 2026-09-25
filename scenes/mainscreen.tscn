@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cljfkj7nknfdl"]
+
+[ext_resource type="Script" uid="uid://bo6204h7xprr1" path="res://scripts/titlescreen.gd" id="1_bbis5"]
+[ext_resource type="PackedScene" uid="uid://b5xttrcn4fhne" path="res://scenes/background.tscn" id="1_beux7"]
+
+[node name="Node2D" type="Node2D" unique_id=1971298207]
+
+[node name="background" parent="." unique_id=732154208 instance=ExtResource("1_beux7")]
+
+[node name="Control" type="Control" parent="." unique_id=1114258113]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1149.0
+offset_bottom = 640.0
+script = ExtResource("1_bbis5")
+
+[node name="Button" type="Button" parent="Control" unique_id=1456355114]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 427.0
+offset_right = 732.0
+offset_bottom = 525.0
+text = "start
+"
+
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]

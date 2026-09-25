@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b5xttrcn4fhne"]
+
+[ext_resource type="Texture2D" uid="uid://x0s1cr27610k" path="res://assets/stagebackground.png" id="1_bkp1e"]
+
+[node name="background" type="Node2D" unique_id=732154208]
+
+[node name="Stagebackground" type="Sprite2D" parent="." unique_id=959150342]
+position = Vector2(576.00006, 320)
+scale = Vector2(1.5668485, 1.4292036)
+texture = ExtResource("1_bkp1e")
