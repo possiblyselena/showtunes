@@ -1,0 +1,602 @@
+[gd_scene format=3 uid="uid://bvtmxyw48mgh1"]
+
+[ext_resource type="Texture2D" uid="uid://deeus424uea8m" path="res://assets/dashboard.png" id="1_uss7l"]
+[ext_resource type="Texture2D" uid="uid://b5kxc5gxvq2cu" path="res://assets/unfilledsquare.png" id="2_w3hss"]
+[ext_resource type="Texture2D" uid="uid://bxjvpsxw6daen" path="res://assets/filledsquare.png" id="3_w3hss"]
+
+[node name="Dashboard" type="Sprite2D" unique_id=1893971836]
+position = Vector2(582.00006, 316.46878)
+scale = Vector2(2.0250223, 2.18668)
+texture = ExtResource("1_uss7l")
+
+[node name="beat1" type="Node2D" parent="." unique_id=594157536]
+position = Vector2(275.5525, -18.447235)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="C" type="TextureButton" parent="beat1" unique_id=1131608109]
+offset_left = -510.1179
+offset_top = 113.354225
+offset_right = -476.0442
+offset_bottom = 143.98412
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="B" type="TextureButton" parent="beat1" unique_id=1217488423]
+offset_left = -508.1426
+offset_top = -97.92498
+offset_right = -474.0689
+offset_bottom = -67.29509
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="A" type="TextureButton" parent="beat1" unique_id=463257410]
+offset_left = -508.1426
+offset_top = -61.797157
+offset_right = -474.0689
+offset_bottom = -31.167267
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="G" type="TextureButton" parent="beat1" unique_id=10378856]
+offset_left = -507.15497
+offset_top = -26.583961
+offset_right = -473.08127
+offset_bottom = 4.045929
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="F" type="TextureButton" parent="beat1" unique_id=1775876098]
+offset_left = -507.64877
+offset_top = 8.171936
+offset_right = -473.57507
+offset_bottom = 38.801826
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="E" type="TextureButton" parent="beat1" unique_id=1905887258]
+offset_left = -508.1426
+offset_top = 43.842453
+offset_right = -474.0689
+offset_bottom = 74.47234
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="D" type="TextureButton" parent="beat1" unique_id=1395330524]
+offset_left = -509.13025
+offset_top = 78.14102
+offset_right = -475.05655
+offset_bottom = 108.77091
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="beat2" type="Node2D" parent="." unique_id=1189666101]
+position = Vector2(325, -18.447)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="C" type="TextureButton" parent="beat2" unique_id=1771144866]
+offset_left = -510.1179
+offset_top = 113.354225
+offset_right = -476.0442
+offset_bottom = 143.98412
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="B" type="TextureButton" parent="beat2" unique_id=1740134423]
+offset_left = -508.1426
+offset_top = -97.92498
+offset_right = -474.0689
+offset_bottom = -67.29509
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="A" type="TextureButton" parent="beat2" unique_id=1066425318]
+offset_left = -508.1426
+offset_top = -61.797157
+offset_right = -474.0689
+offset_bottom = -31.167267
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="G" type="TextureButton" parent="beat2" unique_id=1638607121]
+offset_left = -507.15497
+offset_top = -26.583961
+offset_right = -473.08127
+offset_bottom = 4.045929
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="F" type="TextureButton" parent="beat2" unique_id=1623369220]
+offset_left = -507.64877
+offset_top = 8.171936
+offset_right = -473.57507
+offset_bottom = 38.801826
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="E" type="TextureButton" parent="beat2" unique_id=77055735]
+offset_left = -508.1426
+offset_top = 43.842453
+offset_right = -474.0689
+offset_bottom = 74.47234
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="D" type="TextureButton" parent="beat2" unique_id=1585048755]
+offset_left = -509.13025
+offset_top = 78.14102
+offset_right = -475.05655
+offset_bottom = 108.77091
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="beat3" type="Node2D" parent="." unique_id=2123399941]
+position = Vector2(375, -18.447)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="C" type="TextureButton" parent="beat3" unique_id=331441578]
+offset_left = -510.1179
+offset_top = 113.354225
+offset_right = -476.0442
+offset_bottom = 143.98412
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="B" type="TextureButton" parent="beat3" unique_id=1859463261]
+offset_left = -508.1426
+offset_top = -97.92498
+offset_right = -474.0689
+offset_bottom = -67.29509
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="A" type="TextureButton" parent="beat3" unique_id=435642725]
+offset_left = -508.1426
+offset_top = -61.797157
+offset_right = -474.0689
+offset_bottom = -31.167267
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="G" type="TextureButton" parent="beat3" unique_id=705452923]
+offset_left = -507.15497
+offset_top = -26.583961
+offset_right = -473.08127
+offset_bottom = 4.045929
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="F" type="TextureButton" parent="beat3" unique_id=47274612]
+offset_left = -507.64877
+offset_top = 8.171936
+offset_right = -473.57507
+offset_bottom = 38.801826
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="E" type="TextureButton" parent="beat3" unique_id=2004648862]
+offset_left = -508.1426
+offset_top = 43.842453
+offset_right = -474.0689
+offset_bottom = 74.47234
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="D" type="TextureButton" parent="beat3" unique_id=1218906780]
+offset_left = -509.13025
+offset_top = 78.14102
+offset_right = -475.05655
+offset_bottom = 108.77091
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="beat4" type="Node2D" parent="." unique_id=445320688]
+position = Vector2(425, -18.447)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="C" type="TextureButton" parent="beat4" unique_id=1362113252]
+offset_left = -510.1179
+offset_top = 113.354225
+offset_right = -476.0442
+offset_bottom = 143.98412
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="B" type="TextureButton" parent="beat4" unique_id=114486607]
+offset_left = -508.1426
+offset_top = -97.92498
+offset_right = -474.0689
+offset_bottom = -67.29509
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="A" type="TextureButton" parent="beat4" unique_id=17395570]
+offset_left = -508.1426
+offset_top = -61.797157
+offset_right = -474.0689
+offset_bottom = -31.167267
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="G" type="TextureButton" parent="beat4" unique_id=1474916413]
+offset_left = -507.15497
+offset_top = -26.583961
+offset_right = -473.08127
+offset_bottom = 4.045929
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="F" type="TextureButton" parent="beat4" unique_id=717183996]
+offset_left = -507.64877
+offset_top = 8.171936
+offset_right = -473.57507
+offset_bottom = 38.801826
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="E" type="TextureButton" parent="beat4" unique_id=1685449592]
+offset_left = -508.1426
+offset_top = 43.842453
+offset_right = -474.0689
+offset_bottom = 74.47234
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="D" type="TextureButton" parent="beat4" unique_id=2065800479]
+offset_left = -509.13025
+offset_top = 78.14102
+offset_right = -475.05655
+offset_bottom = 108.77091
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="beat5" type="Node2D" parent="." unique_id=93215961]
+position = Vector2(475, -18.447)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="C" type="TextureButton" parent="beat5" unique_id=1958657234]
+offset_left = -510.1179
+offset_top = 113.354225
+offset_right = -476.0442
+offset_bottom = 143.98412
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="B" type="TextureButton" parent="beat5" unique_id=1093807178]
+offset_left = -508.1426
+offset_top = -97.92498
+offset_right = -474.0689
+offset_bottom = -67.29509
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="A" type="TextureButton" parent="beat5" unique_id=929929724]
+offset_left = -508.1426
+offset_top = -61.797157
+offset_right = -474.0689
+offset_bottom = -31.167267
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="G" type="TextureButton" parent="beat5" unique_id=1478392897]
+offset_left = -507.15497
+offset_top = -26.583961
+offset_right = -473.08127
+offset_bottom = 4.045929
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="F" type="TextureButton" parent="beat5" unique_id=933043964]
+offset_left = -507.64877
+offset_top = 8.171936
+offset_right = -473.57507
+offset_bottom = 38.801826
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="E" type="TextureButton" parent="beat5" unique_id=969110265]
+offset_left = -508.1426
+offset_top = 43.842453
+offset_right = -474.0689
+offset_bottom = 74.47234
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="D" type="TextureButton" parent="beat5" unique_id=1823787335]
+offset_left = -509.13025
+offset_top = 78.14102
+offset_right = -475.05655
+offset_bottom = 108.77091
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="beat6" type="Node2D" parent="." unique_id=1442830559]
+position = Vector2(525, -18.447)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="C" type="TextureButton" parent="beat6" unique_id=826778927]
+offset_left = -510.1179
+offset_top = 113.354225
+offset_right = -476.0442
+offset_bottom = 143.98412
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="B" type="TextureButton" parent="beat6" unique_id=447983467]
+offset_left = -508.1426
+offset_top = -97.92498
+offset_right = -474.0689
+offset_bottom = -67.29509
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="A" type="TextureButton" parent="beat6" unique_id=201910131]
+offset_left = -508.1426
+offset_top = -61.797157
+offset_right = -474.0689
+offset_bottom = -31.167267
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="G" type="TextureButton" parent="beat6" unique_id=1992869503]
+offset_left = -507.15497
+offset_top = -26.583961
+offset_right = -473.08127
+offset_bottom = 4.045929
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="F" type="TextureButton" parent="beat6" unique_id=1915691461]
+offset_left = -507.64877
+offset_top = 8.171936
+offset_right = -473.57507
+offset_bottom = 38.801826
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="E" type="TextureButton" parent="beat6" unique_id=1391564217]
+offset_left = -508.1426
+offset_top = 43.842453
+offset_right = -474.0689
+offset_bottom = 74.47234
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="D" type="TextureButton" parent="beat6" unique_id=915843459]
+offset_left = -509.13025
+offset_top = 78.14102
+offset_right = -475.05655
+offset_bottom = 108.77091
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="beat7" type="Node2D" parent="." unique_id=300910551]
+position = Vector2(575, -18.447)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="C" type="TextureButton" parent="beat7" unique_id=903145825]
+offset_left = -510.1179
+offset_top = 113.354225
+offset_right = -476.0442
+offset_bottom = 143.98412
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="B" type="TextureButton" parent="beat7" unique_id=1428095283]
+offset_left = -508.1426
+offset_top = -97.92498
+offset_right = -474.0689
+offset_bottom = -67.29509
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="A" type="TextureButton" parent="beat7" unique_id=432890515]
+offset_left = -508.1426
+offset_top = -61.797157
+offset_right = -474.0689
+offset_bottom = -31.167267
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="G" type="TextureButton" parent="beat7" unique_id=1833391446]
+offset_left = -507.15497
+offset_top = -26.583961
+offset_right = -473.08127
+offset_bottom = 4.045929
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="F" type="TextureButton" parent="beat7" unique_id=1229470060]
+offset_left = -507.64877
+offset_top = 8.171936
+offset_right = -473.57507
+offset_bottom = 38.801826
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="E" type="TextureButton" parent="beat7" unique_id=1572486697]
+offset_left = -508.1426
+offset_top = 43.842453
+offset_right = -474.0689
+offset_bottom = 74.47234
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="D" type="TextureButton" parent="beat7" unique_id=1814035574]
+offset_left = -509.13025
+offset_top = 78.14102
+offset_right = -475.05655
+offset_bottom = 108.77091
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="beat8" type="Node2D" parent="." unique_id=998504201]
+position = Vector2(625, -18.447)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="C" type="TextureButton" parent="beat8" unique_id=2015295948]
+offset_left = -510.1179
+offset_top = 113.354225
+offset_right = -476.0442
+offset_bottom = 143.98412
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="B" type="TextureButton" parent="beat8" unique_id=1806909826]
+offset_left = -508.1426
+offset_top = -97.92498
+offset_right = -474.0689
+offset_bottom = -67.29509
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="A" type="TextureButton" parent="beat8" unique_id=1096672191]
+offset_left = -508.1426
+offset_top = -61.797157
+offset_right = -474.0689
+offset_bottom = -31.167267
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="G" type="TextureButton" parent="beat8" unique_id=1229638143]
+offset_left = -507.15497
+offset_top = -26.583961
+offset_right = -473.08127
+offset_bottom = 4.045929
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="F" type="TextureButton" parent="beat8" unique_id=1162352435]
+offset_left = -507.64877
+offset_top = 8.171936
+offset_right = -473.57507
+offset_bottom = 38.801826
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="E" type="TextureButton" parent="beat8" unique_id=518908836]
+offset_left = -508.1426
+offset_top = 43.842453
+offset_right = -474.0689
+offset_bottom = 74.47234
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="D" type="TextureButton" parent="beat8" unique_id=1285970530]
+offset_left = -509.13025
+offset_top = 78.14102
+offset_right = -475.05655
+offset_bottom = 108.77091
+texture_normal = ExtResource("2_w3hss")
+texture_pressed = ExtResource("3_w3hss")
+ignore_texture_size = true
+stretch_mode = 0

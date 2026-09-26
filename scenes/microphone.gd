@@ -12,6 +12,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		hide()
 		DialogueManager.show_example_dialogue_balloon(load("res://dialogue/tutorial.dialogue"), "start")
 		get_viewport().set_input_as_handled()
+	
 
 func _on_dialogue_ended(resource: DialogueResource) -> void:
 	show()

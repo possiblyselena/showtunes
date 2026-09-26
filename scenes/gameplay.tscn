@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c2g81x5tcqld0" path="res://scripts/gameplay.gd" id="2_00tan"]
 [ext_resource type="Texture2D" uid="uid://brwke36ma2jew" path="res://assets/microphone.png" id="3_ct7aa"]
 [ext_resource type="Script" uid="uid://cwbt6oadxvjat" path="res://scenes/microphone.gd" id="4_ocj2s"]
+[ext_resource type="PackedScene" uid="uid://bvtmxyw48mgh1" path="res://scenes/micrphonedashboard.tscn" id="5_ocj2s"]
 
 [node name="Node2D" type="Node2D" unique_id=1651015788]
 script = ExtResource("2_00tan")
@@ -14,4 +15,9 @@ script = ExtResource("2_00tan")
 [node name="Microphone" type="Sprite2D" parent="." unique_id=1903560561]
 position = Vector2(576, 255)
 texture = ExtResource("3_ct7aa")
+script = ExtResource("4_ocj2s")
+
+[node name="Dashboard" parent="." unique_id=1893971836 instance=ExtResource("5_ocj2s")]
+position = Vector2(416.9922, 319.01563)
+scale = Vector2(1.3950456, 1.9408813)
 script = ExtResource("4_ocj2s")
