@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bvtmxyw48mgh1"]
 
 [ext_resource type="Texture2D" uid="uid://deeus424uea8m" path="res://assets/dashboard.png" id="1_uss7l"]
-[ext_resource type="Script" uid="uid://tll7nxi6an1c" path="res://scenes/pianodash.gd" id="2_k3bmt"]
+[ext_resource type="Script" uid="uid://tll7nxi6an1c" path="res://scripts/pianodash.gd" id="2_k3bmt"]
 [ext_resource type="Texture2D" uid="uid://b5kxc5gxvq2cu" path="res://assets/unfilledsquare.png" id="2_w3hss"]
 [ext_resource type="Texture2D" uid="uid://bxjvpsxw6daen" path="res://assets/filledsquare.png" id="3_w3hss"]
 [ext_resource type="AudioStream" uid="uid://p6ss7vxfyhjs" path="res://music/piano_c1.wav" id="6_qu1bq"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://uemyls1c3jqf" path="res://music/piano_a1.wav" id="8_xauei"]
 [ext_resource type="AudioStream" uid="uid://d3fqbo8v0ie44" path="res://music/piano_g1.wav" id="9_kbct2"]
 [ext_resource type="Texture2D" uid="uid://7a6teautquft" path="res://assets/arrow.png" id="13_q83ak"]
+[ext_resource type="Texture2D" uid="uid://dvyp4jy7fa45r" path="res://assets/play.png" id="14_hkju6"]
 [ext_resource type="Script" uid="uid://bwni44c6reluq" path="res://scripts/beat_2.gd" id="14_qdmxc"]
 
 [node name="Dashboard" type="Sprite2D" unique_id=1893971836]
@@ -909,6 +910,15 @@ texture_normal = ExtResource("13_q83ak")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="playbutton" type="TextureButton" parent="." unique_id=797696763]
+offset_left = 148.6403
+offset_top = -6.1594787
+offset_right = 231.10854
+offset_bottom = 64.02419
+texture_normal = ExtResource("14_hkju6")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="pressed" from="beat1/C" to="." method="_on_c_pressed"]
 [connection signal="pressed" from="beat1/C" to="beat1" method="_on_c_pressed"]
 [connection signal="pressed" from="beat1/B" to="beat1" method="_on_b_pressed"]
@@ -974,3 +984,4 @@ stretch_mode = 0
 [connection signal="pressed" from="beat8/E" to="beat8" method="_on_e_pressed"]
 [connection signal="pressed" from="beat8/D" to="beat8" method="_on_d_pressed"]
 [connection signal="pressed" from="backbutton" to="." method="_on_backbutton_pressed"]
+[connection signal="pressed" from="playbutton" to="." method="_on_playbutton_pressed"]

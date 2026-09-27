@@ -74,7 +74,7 @@ func _trigger_button_audio(button_node: Node) -> void:
 func _on_playbutton_pressed() -> void:
 	start_sequence()
 
-func _on_microphone_pressed() -> void:
+func _on_piano_pressed() -> void:
 	show()
 
 func _on_backbutton_pressed() -> void:

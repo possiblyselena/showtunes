@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://1dgnd23e3ub5" path="res://music/sing_e1.wav" id="11_f52ff"]
 [ext_resource type="AudioStream" uid="uid://clqha2e1wwhn6" path="res://music/sing_d1.wav" id="12_f5vq6"]
 [ext_resource type="Texture2D" uid="uid://7a6teautquft" path="res://assets/arrow.png" id="13_e2kf0"]
+[ext_resource type="Texture2D" uid="uid://dvyp4jy7fa45r" path="res://assets/play.png" id="14_1ktek"]
 
 [node name="Dashboard" type="Sprite2D" unique_id=1893971836]
 position = Vector2(582.00006, 316.46878)
@@ -864,6 +865,18 @@ texture_normal = ExtResource("13_e2kf0")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="playbutton" type="TextureButton" parent="." unique_id=560418785]
+offset_left = 158.02292
+offset_top = -18.506948
+offset_right = 241.9726
+offset_bottom = 57.164482
+rotation = 0.17453292
+texture_normal = ExtResource("14_1ktek")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=684149316]
+
 [connection signal="pressed" from="beat1/C" to="." method="_on_c_pressed"]
 [connection signal="pressed" from="beat1/C" to="beat1" method="_on_c_pressed"]
 [connection signal="pressed" from="beat1/B" to="beat1" method="_on_b_pressed"]
@@ -929,3 +942,5 @@ stretch_mode = 0
 [connection signal="pressed" from="beat8/E" to="beat8" method="_on_e_pressed"]
 [connection signal="pressed" from="beat8/D" to="beat8" method="_on_d_pressed"]
 [connection signal="pressed" from="backbutton" to="." method="_on_backbutton_pressed"]
+[connection signal="pressed" from="playbutton" to="." method="_on_playbutton_pressed"]
+[connection signal="pressed" from="playbutton" to="AudioStreamPlayer" method="_on_playbutton_pressed"]

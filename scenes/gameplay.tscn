@@ -1,19 +1,23 @@
 [gd_scene format=3 uid="uid://8nhj3k04nbm4"]
 
-[ext_resource type="PackedScene" uid="uid://b5xttrcn4fhne" path="res://scripts/background.tscn" id="1_7biu0"]
+[ext_resource type="PackedScene" uid="uid://b5xttrcn4fhne" path="res://scenes/background.tscn" id="1_7biu0"]
 [ext_resource type="Script" uid="uid://c2g81x5tcqld0" path="res://scripts/gameplay.gd" id="2_00tan"]
+[ext_resource type="Script" uid="uid://b5g75p7t3143x" path="res://scripts/demo.gd" id="2_qixtg"]
 [ext_resource type="Texture2D" uid="uid://brwke36ma2jew" path="res://assets/microphone.png" id="3_ct7aa"]
 [ext_resource type="Script" uid="uid://cwbt6oadxvjat" path="res://scripts/microphone.gd" id="4_ocj2s"]
 [ext_resource type="PackedScene" uid="uid://bvtmxyw48mgh1" path="res://scenes/pianodash.tscn" id="5_ocj2s"]
 [ext_resource type="Texture2D" uid="uid://cmkvf08thygdd" path="res://assets/piano.png" id="7_e124b"]
-[ext_resource type="Script" uid="uid://dj7xr7swdiivm" path="res://scenes/piano.gd" id="8_101mb"]
+[ext_resource type="Script" uid="uid://dj7xr7swdiivm" path="res://scripts/piano.gd" id="8_101mb"]
 [ext_resource type="PackedScene" uid="uid://b3ufdydpgq2xe" path="res://scenes/micdash.tscn" id="8_e124b"]
 [ext_resource type="PackedScene" uid="uid://1nnvq8sou810" path="res://scenes/frogspawn.tscn" id="9_101mb"]
+[ext_resource type="Script" uid="uid://e5dbfolv0b2e" path="res://scenes/finishbutton.gd" id="10_hbo4f"]
+[ext_resource type="Texture2D" uid="uid://dvyp4jy7fa45r" path="res://assets/play.png" id="11_nt65e"]
 
 [node name="Node2D" type="Node2D" unique_id=1651015788]
 script = ExtResource("2_00tan")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1255011822]
+script = ExtResource("2_qixtg")
 
 [node name="frogspawn" parent="Node2D" unique_id=1537410883 instance=ExtResource("9_101mb")]
 unique_name_in_owner = true
@@ -51,6 +55,16 @@ scale = Vector2(1.5142905, 1.788422)
 wait_time = 10.0
 autostart = true
 
+[node name="finishbutton" type="TextureButton" parent="Node2D" unique_id=1384422452]
+offset_left = 971.0
+offset_top = 456.0
+offset_right = 1130.0
+offset_bottom = 615.0
+texture_normal = ExtResource("11_nt65e")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("10_hbo4f")
+
 [connection signal="pressed" from="Node2D/Microphone" to="." method="_on_microphone_pressed"]
 [connection signal="pressed" from="Node2D/Microphone" to="Node2D/Microphone/Dashboard" method="_on_microphone_pressed"]
 [connection signal="pressed" from="Node2D/Microphone" to="Node2D/Piano" method="_on_microphone_pressed"]
@@ -58,3 +72,5 @@ autostart = true
 [connection signal="visibility_changed" from="Node2D/Microphone/Dashboard" to="Node2D/Piano" method="_on_dashboard_visibility_changed"]
 [connection signal="pressed" from="Node2D/Piano" to="." method="_on_piano_pressed"]
 [connection signal="pressed" from="Node2D/Piano" to="Node2D/Piano/Dashboard" method="_on_piano_pressed"]
+[connection signal="pressed" from="Node2D/finishbutton" to="." method="_on_finishbutton_pressed"]
+[connection signal="pressed" from="Node2D/finishbutton" to="Node2D" method="_on_finishbutton_pressed"]
