@@ -51,7 +51,7 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="PianoB1" type="AudioStreamPlayer" parent="beat1" unique_id=573412639]
+[node name="PianoB1" type="AudioStreamPlayer" parent="beat1/B" unique_id=573412639]
 stream = ExtResource("7_q83ak")
 volume_db = -30.0
 
@@ -161,7 +161,7 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="PianoB1" type="AudioStreamPlayer" parent="beat2" unique_id=195867525]
+[node name="PianoB1" type="AudioStreamPlayer" parent="beat2/B" unique_id=195867525]
 stream = ExtResource("7_q83ak")
 volume_db = -30.0
 
@@ -271,7 +271,7 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="PianoB1" type="AudioStreamPlayer" parent="beat3" unique_id=1088847255]
+[node name="PianoB1" type="AudioStreamPlayer" parent="beat3/B" unique_id=1088847255]
 stream = ExtResource("7_q83ak")
 volume_db = -30.0
 
@@ -381,7 +381,7 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="PianoB1" type="AudioStreamPlayer" parent="beat4" unique_id=1070361608]
+[node name="PianoB1" type="AudioStreamPlayer" parent="beat4/B" unique_id=1070361608]
 stream = ExtResource("7_q83ak")
 volume_db = -30.0
 

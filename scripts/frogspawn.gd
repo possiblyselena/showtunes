@@ -1,25 +1,23 @@
 extends Node2D
 
-@export var point_1 : Vector2 = Vector2(50,50)
-@export var point_2: Vector2 = Vector2(1100, 600)
+@export var point_1 : Vector2 = Vector2(50, 50)
+@export var point_2 : Vector2 = Vector2(1100, 600)
 
-@onready var frog_visitor : Resource = preload("res://scenes/frog.tscn")
+@onready var frog_visitor : PackedScene = preload("res://scenes/frog.tscn")
+
 func get_random_point_inside(p1: Vector2, p2: Vector2) -> Vector2:
 	var x_value: float = randf_range(p1.x, p2.x)
 	var y_value: float = randf_range(p1.y, p2.y)
-	var random_point_inside: Vector2 = Vector2(x_value, y_value)
-	return(random_point_inside)
+	return Vector2(x_value, y_value)
+
+func spawn_frog() -> void:
+	var frog_instance = frog_visitor.instantiate()
 	
-func spawn_frog():
-	var frog_instance: Node = frog_visitor.instantiate()
+	# Set Z Index to render above other nodes (default is 0)
+	frog_instance.z_index = 10 
+	
 	add_child(frog_instance)
 	var spawn_location: Vector2 = get_random_point_inside(point_1, point_2)
-	frog_instance.set_position(spawn_location)
-
-func _ready() -> void:
-	randomize()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	frog_instance.global_position = spawn_location
+	
+	print("Frog spawned at: ", frog_instance.global_position)
