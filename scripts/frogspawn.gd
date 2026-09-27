@@ -1,7 +1,7 @@
 extends Node2D
 
-@export var point_1 : Vector2 = Vector2(50, 50)
-@export var point_2 : Vector2 = Vector2(1100, 600)
+@export var point_1 : Vector2 = Vector2(-200, 0)
+@export var point_2 : Vector2 = Vector2(500, 400)
 
 @onready var frog_visitor : PackedScene = preload("res://scenes/frog.tscn")
 
