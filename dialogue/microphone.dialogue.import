@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://c2awpjw180pwp"
+path="res://.godot/imported/microphone.dialogue-a575ff5f6c7e144ea623ab98416e7a34.tres"
+
+[deps]
+
+source_file="res://dialogue/microphone.dialogue"
+dest_files=["res://.godot/imported/microphone.dialogue-a575ff5f6c7e144ea623ab98416e7a34.tres"]
+
+[params]
+
+defaults=true

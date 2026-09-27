@@ -47,6 +47,10 @@ script = ExtResource("8_101mb")
 position = Vector2(-290.00003, 157.99998)
 scale = Vector2(1.5142905, 1.788422)
 
+[node name="Timer" type="Timer" parent="Node2D" unique_id=1164629961]
+wait_time = 10.0
+autostart = true
+
 [connection signal="pressed" from="Node2D/Microphone" to="." method="_on_microphone_pressed"]
 [connection signal="pressed" from="Node2D/Microphone" to="Node2D/Microphone/Dashboard" method="_on_microphone_pressed"]
 [connection signal="pressed" from="Node2D/Microphone" to="Node2D/Piano" method="_on_microphone_pressed"]
