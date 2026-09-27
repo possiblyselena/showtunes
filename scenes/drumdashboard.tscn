@@ -1,0 +1,302 @@
+[gd_scene format=3 uid="uid://cumwyahdehhiu"]
+
+[ext_resource type="Texture2D" uid="uid://cemf8eta7n04h" path="res://assets/drums.png" id="1_5u76i"]
+[ext_resource type="Texture2D" uid="uid://b5kxc5gxvq2cu" path="res://assets/unfilledsquare.png" id="2_5sjve"]
+[ext_resource type="Script" uid="uid://b6jbpqiwl1avr" path="res://scenes/beat_3.gd" id="2_cemqr"]
+[ext_resource type="Script" uid="uid://cnnplvi7moilp" path="res://scenes/drumdashboard.gd" id="2_oxwra"]
+[ext_resource type="Texture2D" uid="uid://bxjvpsxw6daen" path="res://assets/filledsquare.png" id="3_cemqr"]
+[ext_resource type="AudioStream" uid="uid://8gib20qw43st" path="res://music/drum.wav" id="4_23spx"]
+[ext_resource type="Texture2D" uid="uid://i5ohnrq7jxub" path="res://assets/unfilledtriangle.png" id="5_oxwra"]
+[ext_resource type="Texture2D" uid="uid://cd25ojx7xlple" path="res://assets/filledtriangle.png" id="6_dgk8c"]
+[ext_resource type="AudioStream" uid="uid://byadg8t1u238r" path="res://music/sound (14).wav" id="7_fbw31"]
+[ext_resource type="Texture2D" uid="uid://7a6teautquft" path="res://assets/arrow.png" id="10_dgk8c"]
+[ext_resource type="Texture2D" uid="uid://dvyp4jy7fa45r" path="res://assets/play.png" id="11_fbw31"]
+
+[node name="Dashboard" type="Sprite2D" unique_id=1095453893]
+position = Vector2(571, 442)
+texture = ExtResource("1_5u76i")
+script = ExtResource("2_oxwra")
+
+[node name="beat1" type="Node2D" parent="." unique_id=1650961155]
+script = ExtResource("2_cemqr")
+
+[node name="drum" type="TextureButton" parent="beat1" unique_id=1162715224]
+offset_left = -283.0
+offset_top = -49.0
+offset_right = -233.0
+toggle_mode = true
+texture_normal = ExtResource("2_5sjve")
+texture_pressed = ExtResource("3_cemqr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Drum" type="AudioStreamPlayer" parent="beat1/drum" unique_id=298700240]
+stream = ExtResource("4_23spx")
+
+[node name="hihat" type="TextureButton" parent="beat1" unique_id=1118051507]
+offset_left = -287.0
+offset_top = 19.0
+offset_right = -230.0
+offset_bottom = 65.0
+toggle_mode = true
+texture_normal = ExtResource("5_oxwra")
+texture_pressed = ExtResource("6_dgk8c")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Sound(14)" type="AudioStreamPlayer" parent="beat1/hihat" unique_id=1359930129]
+stream = ExtResource("7_fbw31")
+
+[node name="beat2" type="Node2D" parent="." unique_id=818904435]
+position = Vector2(60, 0)
+script = ExtResource("2_cemqr")
+
+[node name="drum" type="TextureButton" parent="beat2" unique_id=1473498500]
+offset_left = -283.0
+offset_top = -49.0
+offset_right = -233.0
+toggle_mode = true
+texture_normal = ExtResource("2_5sjve")
+texture_pressed = ExtResource("3_cemqr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Drum" type="AudioStreamPlayer" parent="beat2/drum" unique_id=1478874006]
+stream = ExtResource("4_23spx")
+
+[node name="hihat" type="TextureButton" parent="beat2" unique_id=45448155]
+offset_left = -287.0
+offset_top = 19.0
+offset_right = -230.0
+offset_bottom = 65.0
+toggle_mode = true
+texture_normal = ExtResource("5_oxwra")
+texture_pressed = ExtResource("6_dgk8c")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Sound(14)" type="AudioStreamPlayer" parent="beat2/hihat" unique_id=1468864733]
+stream = ExtResource("7_fbw31")
+
+[node name="beat3" type="Node2D" parent="." unique_id=641931403]
+position = Vector2(120, 0)
+script = ExtResource("2_cemqr")
+
+[node name="drum" type="TextureButton" parent="beat3" unique_id=1467951317]
+offset_left = -283.0
+offset_top = -49.0
+offset_right = -233.0
+toggle_mode = true
+texture_normal = ExtResource("2_5sjve")
+texture_pressed = ExtResource("3_cemqr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Drum" type="AudioStreamPlayer" parent="beat3/drum" unique_id=1360488382]
+stream = ExtResource("4_23spx")
+
+[node name="hihat" type="TextureButton" parent="beat3" unique_id=239547378]
+offset_left = -287.0
+offset_top = 19.0
+offset_right = -230.0
+offset_bottom = 65.0
+toggle_mode = true
+texture_normal = ExtResource("5_oxwra")
+texture_pressed = ExtResource("6_dgk8c")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Sound(14)" type="AudioStreamPlayer" parent="beat3/hihat" unique_id=1702309618]
+stream = ExtResource("7_fbw31")
+
+[node name="beat4" type="Node2D" parent="." unique_id=849426442]
+position = Vector2(180, 0)
+script = ExtResource("2_cemqr")
+
+[node name="drum" type="TextureButton" parent="beat4" unique_id=750366121]
+offset_left = -283.0
+offset_top = -49.0
+offset_right = -233.0
+toggle_mode = true
+texture_normal = ExtResource("2_5sjve")
+texture_pressed = ExtResource("3_cemqr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Drum" type="AudioStreamPlayer" parent="beat4/drum" unique_id=1149438115]
+stream = ExtResource("4_23spx")
+
+[node name="hihat" type="TextureButton" parent="beat4" unique_id=900915851]
+offset_left = -287.0
+offset_top = 19.0
+offset_right = -230.0
+offset_bottom = 65.0
+toggle_mode = true
+texture_normal = ExtResource("5_oxwra")
+texture_pressed = ExtResource("6_dgk8c")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Sound(14)" type="AudioStreamPlayer" parent="beat4/hihat" unique_id=1603006816]
+stream = ExtResource("7_fbw31")
+
+[node name="beat5" type="Node2D" parent="." unique_id=1579707180]
+position = Vector2(240, 0)
+script = ExtResource("2_cemqr")
+
+[node name="drum" type="TextureButton" parent="beat5" unique_id=213634241]
+offset_left = -283.0
+offset_top = -49.0
+offset_right = -233.0
+toggle_mode = true
+texture_normal = ExtResource("2_5sjve")
+texture_pressed = ExtResource("3_cemqr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Drum" type="AudioStreamPlayer" parent="beat5/drum" unique_id=1366840926]
+stream = ExtResource("4_23spx")
+
+[node name="hihat" type="TextureButton" parent="beat5" unique_id=1353828710]
+offset_left = -287.0
+offset_top = 19.0
+offset_right = -230.0
+offset_bottom = 65.0
+toggle_mode = true
+texture_normal = ExtResource("5_oxwra")
+texture_pressed = ExtResource("6_dgk8c")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Sound(14)" type="AudioStreamPlayer" parent="beat5/hihat" unique_id=619482631]
+stream = ExtResource("7_fbw31")
+
+[node name="beat6" type="Node2D" parent="." unique_id=1362210364]
+position = Vector2(300, 0)
+script = ExtResource("2_cemqr")
+
+[node name="drum" type="TextureButton" parent="beat6" unique_id=506358925]
+offset_left = -283.0
+offset_top = -49.0
+offset_right = -233.0
+toggle_mode = true
+texture_normal = ExtResource("2_5sjve")
+texture_pressed = ExtResource("3_cemqr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Drum" type="AudioStreamPlayer" parent="beat6/drum" unique_id=1624013234]
+stream = ExtResource("4_23spx")
+
+[node name="hihat" type="TextureButton" parent="beat6" unique_id=17217110]
+offset_left = -287.0
+offset_top = 19.0
+offset_right = -230.0
+offset_bottom = 65.0
+toggle_mode = true
+texture_normal = ExtResource("5_oxwra")
+texture_pressed = ExtResource("6_dgk8c")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Sound(14)" type="AudioStreamPlayer" parent="beat6/hihat" unique_id=1781818749]
+stream = ExtResource("7_fbw31")
+
+[node name="beat7" type="Node2D" parent="." unique_id=353693116]
+position = Vector2(360, 0)
+script = ExtResource("2_cemqr")
+
+[node name="drum" type="TextureButton" parent="beat7" unique_id=1192642005]
+offset_left = -283.0
+offset_top = -49.0
+offset_right = -233.0
+toggle_mode = true
+texture_normal = ExtResource("2_5sjve")
+texture_pressed = ExtResource("3_cemqr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Drum" type="AudioStreamPlayer" parent="beat7/drum" unique_id=537256020]
+stream = ExtResource("4_23spx")
+
+[node name="hihat" type="TextureButton" parent="beat7" unique_id=327972529]
+offset_left = -287.0
+offset_top = 19.0
+offset_right = -230.0
+offset_bottom = 65.0
+toggle_mode = true
+texture_normal = ExtResource("5_oxwra")
+texture_pressed = ExtResource("6_dgk8c")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Sound(14)" type="AudioStreamPlayer" parent="beat7/hihat" unique_id=2021628631]
+stream = ExtResource("7_fbw31")
+
+[node name="beat8" type="Node2D" parent="." unique_id=2124613290]
+position = Vector2(420, 0)
+script = ExtResource("2_cemqr")
+
+[node name="drum" type="TextureButton" parent="beat8" unique_id=336455487]
+offset_left = -283.0
+offset_top = -49.0
+offset_right = -233.0
+toggle_mode = true
+texture_normal = ExtResource("2_5sjve")
+texture_pressed = ExtResource("3_cemqr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Drum" type="AudioStreamPlayer" parent="beat8/drum" unique_id=1412294271]
+stream = ExtResource("4_23spx")
+
+[node name="hihat" type="TextureButton" parent="beat8" unique_id=570556244]
+offset_left = -287.0
+offset_top = 19.0
+offset_right = -230.0
+offset_bottom = 65.0
+toggle_mode = true
+texture_normal = ExtResource("5_oxwra")
+texture_pressed = ExtResource("6_dgk8c")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Sound(14)" type="AudioStreamPlayer" parent="beat8/hihat" unique_id=375516]
+stream = ExtResource("7_fbw31")
+
+[node name="backbutton" type="TextureButton" parent="." unique_id=1629266163]
+offset_left = 211.0
+offset_top = 3.0
+offset_right = 281.0
+offset_bottom = 66.0
+texture_normal = ExtResource("10_dgk8c")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="playbutton" type="TextureButton" parent="." unique_id=2019416157]
+offset_left = 195.0
+offset_top = -94.0
+offset_right = 283.0
+offset_bottom = 1.0
+texture_normal = ExtResource("11_fbw31")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="beat1/drum" to="beat1" method="_on_drum_pressed"]
+[connection signal="pressed" from="beat1/hihat" to="beat1" method="_on_hihat_pressed"]
+[connection signal="pressed" from="beat2/drum" to="beat2" method="_on_drum_pressed"]
+[connection signal="pressed" from="beat2/hihat" to="beat2" method="_on_hihat_pressed"]
+[connection signal="pressed" from="beat3/drum" to="beat3" method="_on_drum_pressed"]
+[connection signal="pressed" from="beat3/hihat" to="beat3" method="_on_hihat_pressed"]
+[connection signal="pressed" from="beat4/drum" to="beat4" method="_on_drum_pressed"]
+[connection signal="pressed" from="beat4/hihat" to="beat4" method="_on_hihat_pressed"]
+[connection signal="pressed" from="beat5/drum" to="beat5" method="_on_drum_pressed"]
+[connection signal="pressed" from="beat5/hihat" to="beat5" method="_on_hihat_pressed"]
+[connection signal="pressed" from="beat6/drum" to="beat6" method="_on_drum_pressed"]
+[connection signal="pressed" from="beat6/hihat" to="beat6" method="_on_hihat_pressed"]
+[connection signal="pressed" from="beat7/drum" to="beat7" method="_on_drum_pressed"]
+[connection signal="pressed" from="beat7/hihat" to="beat7" method="_on_hihat_pressed"]
+[connection signal="pressed" from="beat8/drum" to="beat8" method="_on_drum_pressed"]
+[connection signal="pressed" from="beat8/hihat" to="beat8" method="_on_hihat_pressed"]
+[connection signal="pressed" from="backbutton" to="." method="_on_backbutton_pressed"]
+[connection signal="pressed" from="playbutton" to="." method="_on_playbutton_pressed"]
