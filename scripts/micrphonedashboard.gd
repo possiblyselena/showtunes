@@ -10,4 +10,7 @@ func _process(delta: float) -> void:
 
 func _on_microphone_pressed() -> void:
 	show()
-	pass # Replace with function body.
+
+
+func _on_backbutton_pressed() -> void:
+	hide()

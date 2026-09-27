@@ -1,28 +1,29 @@
 [gd_scene format=3 uid="uid://bvtmxyw48mgh1"]
 
 [ext_resource type="Texture2D" uid="uid://deeus424uea8m" path="res://assets/dashboard.png" id="1_uss7l"]
-[ext_resource type="Script" uid="uid://dralofpanb36o" path="res://scenes/micrphonedashboard.gd" id="2_q08m2"]
+[ext_resource type="Script" uid="uid://tll7nxi6an1c" path="res://scenes/pianodash.gd" id="2_k3bmt"]
 [ext_resource type="Texture2D" uid="uid://b5kxc5gxvq2cu" path="res://assets/unfilledsquare.png" id="2_w3hss"]
-[ext_resource type="Script" uid="uid://1qoqk7qi3a5p" path="res://scenes/beat_1.gd" id="3_vjuo8"]
 [ext_resource type="Texture2D" uid="uid://bxjvpsxw6daen" path="res://assets/filledsquare.png" id="3_w3hss"]
-[ext_resource type="AudioStream" uid="uid://gxpkjl851bh5" path="res://music/sing_c1.wav" id="5_vjuo8"]
-[ext_resource type="AudioStream" uid="uid://depfqolr5gd8p" path="res://music/sing_g1.wav" id="7_5psa2"]
-[ext_resource type="AudioStream" uid="uid://clqha2e1wwhn6" path="res://music/sing_d1.wav" id="7_7pdyd"]
-[ext_resource type="AudioStream" uid="uid://44iva0xuo2vt" path="res://music/sing_f1.wav" id="7_h5m60"]
-[ext_resource type="AudioStream" uid="uid://8rpbjmr5hwtd" path="res://music/sing_b1.wav" id="7_qu1bq"]
-[ext_resource type="AudioStream" uid="uid://1dgnd23e3ub5" path="res://music/sing_e1.wav" id="7_scfsd"]
-[ext_resource type="AudioStream" uid="uid://dmnlsb4l87imp" path="res://music/sing_a1.wav" id="8_q83ak"]
+[ext_resource type="AudioStream" uid="uid://p6ss7vxfyhjs" path="res://music/piano_c1.wav" id="6_qu1bq"]
+[ext_resource type="AudioStream" uid="uid://bde8c8vp3lt4r" path="res://music/piano_f1.wav" id="7_h5m60"]
+[ext_resource type="AudioStream" uid="uid://d0stk8km352fv" path="res://music/piano_b1.wav" id="7_q83ak"]
+[ext_resource type="AudioStream" uid="uid://bx4rkr2cwm2xw" path="res://music/piano_d1.wav" id="7_scfsd"]
+[ext_resource type="AudioStream" uid="uid://cvh1pmo2ndxyq" path="res://music/piano_e1.wav" id="8_5psa2"]
+[ext_resource type="AudioStream" uid="uid://uemyls1c3jqf" path="res://music/piano_a1.wav" id="8_xauei"]
+[ext_resource type="AudioStream" uid="uid://d3fqbo8v0ie44" path="res://music/piano_g1.wav" id="9_kbct2"]
+[ext_resource type="Texture2D" uid="uid://7a6teautquft" path="res://assets/arrow.png" id="13_q83ak"]
+[ext_resource type="Script" uid="uid://bwni44c6reluq" path="res://scripts/beat_2.gd" id="14_qdmxc"]
 
 [node name="Dashboard" type="Sprite2D" unique_id=1893971836]
 position = Vector2(582.00006, 316.46878)
 scale = Vector2(2.0250223, 2.18668)
 texture = ExtResource("1_uss7l")
-script = ExtResource("2_q08m2")
+script = ExtResource("2_k3bmt")
 
 [node name="beat1" type="Node2D" parent="." unique_id=594157536]
 position = Vector2(275.5525, -18.447235)
 scale = Vector2(0.99999994, 0.99999994)
-script = ExtResource("3_vjuo8")
+script = ExtResource("14_qdmxc")
 
 [node name="C" type="TextureButton" parent="beat1" unique_id=1131608109]
 offset_left = -510.1179
@@ -35,9 +36,9 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="C" type="AudioStreamPlayer" parent="beat1/C" unique_id=1507923238]
-stream = ExtResource("5_vjuo8")
-volume_db = 1.0
+[node name="PianoC1" type="AudioStreamPlayer" parent="beat1/C" unique_id=986147045]
+stream = ExtResource("6_qu1bq")
+volume_db = -30.0
 
 [node name="B" type="TextureButton" parent="beat1" unique_id=1217488423]
 offset_left = -508.1426
@@ -50,8 +51,9 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingB1" type="AudioStreamPlayer" parent="beat1/B" unique_id=1354428456]
-stream = ExtResource("7_qu1bq")
+[node name="PianoB1" type="AudioStreamPlayer" parent="beat1" unique_id=573412639]
+stream = ExtResource("7_q83ak")
+volume_db = -30.0
 
 [node name="A" type="TextureButton" parent="beat1" unique_id=463257410]
 offset_left = -508.1426
@@ -64,8 +66,9 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingA1" type="AudioStreamPlayer" parent="beat1/A" unique_id=1270604989]
-stream = ExtResource("8_q83ak")
+[node name="PianoA1" type="AudioStreamPlayer" parent="beat1/A" unique_id=302480711]
+stream = ExtResource("8_xauei")
+volume_db = -30.0
 
 [node name="G" type="TextureButton" parent="beat1" unique_id=10378856]
 offset_left = -507.15497
@@ -78,8 +81,9 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingG1" type="AudioStreamPlayer" parent="beat1/G" unique_id=1267883883]
-stream = ExtResource("7_5psa2")
+[node name="PianoG1" type="AudioStreamPlayer" parent="beat1/G" unique_id=1068694987]
+stream = ExtResource("9_kbct2")
+volume_db = -30.0
 
 [node name="F" type="TextureButton" parent="beat1" unique_id=1775876098]
 offset_left = -507.64877
@@ -92,8 +96,9 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingF1" type="AudioStreamPlayer" parent="beat1" unique_id=951250783]
+[node name="PianoF1" type="AudioStreamPlayer" parent="beat1/F" unique_id=1227840856]
 stream = ExtResource("7_h5m60")
+volume_db = -30.0
 
 [node name="E" type="TextureButton" parent="beat1" unique_id=1905887258]
 offset_left = -508.1426
@@ -106,8 +111,9 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingE1" type="AudioStreamPlayer" parent="beat1/E" unique_id=1961693584]
-stream = ExtResource("7_scfsd")
+[node name="PianoE1" type="AudioStreamPlayer" parent="beat1/E" unique_id=1003224143]
+stream = ExtResource("8_5psa2")
+volume_db = -30.0
 
 [node name="D" type="TextureButton" parent="beat1" unique_id=1395330524]
 offset_left = -509.13025
@@ -120,12 +126,16 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="beat2" type="Node2D" parent="." unique_id=2052931517]
+[node name="PianoD1" type="AudioStreamPlayer" parent="beat1/D" unique_id=239403873]
+stream = ExtResource("7_scfsd")
+volume_db = -30.0
+
+[node name="beat2" type="Node2D" parent="." unique_id=900222305]
 position = Vector2(325, -18.447)
 scale = Vector2(0.99999994, 0.99999994)
-script = ExtResource("3_vjuo8")
+script = ExtResource("14_qdmxc")
 
-[node name="C" type="TextureButton" parent="beat2" unique_id=1198149828]
+[node name="C" type="TextureButton" parent="beat2" unique_id=1813482022]
 offset_left = -510.1179
 offset_top = 113.354225
 offset_right = -476.0442
@@ -136,11 +146,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="C" type="AudioStreamPlayer" parent="beat2/C" unique_id=58569094]
-stream = ExtResource("5_vjuo8")
-volume_db = 1.0
+[node name="PianoC1" type="AudioStreamPlayer" parent="beat2/C" unique_id=12993221]
+stream = ExtResource("6_qu1bq")
+volume_db = -30.0
 
-[node name="B" type="TextureButton" parent="beat2" unique_id=640328204]
+[node name="B" type="TextureButton" parent="beat2" unique_id=1778963506]
 offset_left = -508.1426
 offset_top = -97.92498
 offset_right = -474.0689
@@ -151,10 +161,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingB1" type="AudioStreamPlayer" parent="beat2/B" unique_id=1206879470]
-stream = ExtResource("7_qu1bq")
+[node name="PianoB1" type="AudioStreamPlayer" parent="beat2" unique_id=195867525]
+stream = ExtResource("7_q83ak")
+volume_db = -30.0
 
-[node name="A" type="TextureButton" parent="beat2" unique_id=2113333990]
+[node name="A" type="TextureButton" parent="beat2" unique_id=929427179]
 offset_left = -508.1426
 offset_top = -61.797157
 offset_right = -474.0689
@@ -165,10 +176,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingA1" type="AudioStreamPlayer" parent="beat2/A" unique_id=791106528]
-stream = ExtResource("8_q83ak")
+[node name="PianoA1" type="AudioStreamPlayer" parent="beat2/A" unique_id=410304424]
+stream = ExtResource("8_xauei")
+volume_db = -30.0
 
-[node name="G" type="TextureButton" parent="beat2" unique_id=1793994798]
+[node name="G" type="TextureButton" parent="beat2" unique_id=778516232]
 offset_left = -507.15497
 offset_top = -26.583961
 offset_right = -473.08127
@@ -179,10 +191,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingG1" type="AudioStreamPlayer" parent="beat2/G" unique_id=272923466]
-stream = ExtResource("7_5psa2")
+[node name="PianoG1" type="AudioStreamPlayer" parent="beat2/G" unique_id=2103722528]
+stream = ExtResource("9_kbct2")
+volume_db = -30.0
 
-[node name="F" type="TextureButton" parent="beat2" unique_id=364338479]
+[node name="F" type="TextureButton" parent="beat2" unique_id=230790136]
 offset_left = -507.64877
 offset_top = 8.171936
 offset_right = -473.57507
@@ -193,10 +206,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingF1" type="AudioStreamPlayer" parent="beat2" unique_id=1043592706]
+[node name="PianoF1" type="AudioStreamPlayer" parent="beat2/F" unique_id=1771020177]
 stream = ExtResource("7_h5m60")
+volume_db = -30.0
 
-[node name="E" type="TextureButton" parent="beat2" unique_id=50416918]
+[node name="E" type="TextureButton" parent="beat2" unique_id=812143553]
 offset_left = -508.1426
 offset_top = 43.842453
 offset_right = -474.0689
@@ -207,10 +221,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingE1" type="AudioStreamPlayer" parent="beat2/E" unique_id=825037838]
-stream = ExtResource("7_scfsd")
+[node name="PianoE1" type="AudioStreamPlayer" parent="beat2/E" unique_id=1625634962]
+stream = ExtResource("8_5psa2")
+volume_db = -30.0
 
-[node name="D" type="TextureButton" parent="beat2" unique_id=195826673]
+[node name="D" type="TextureButton" parent="beat2" unique_id=571969250]
 offset_left = -509.13025
 offset_top = 78.14102
 offset_right = -475.05655
@@ -221,12 +236,16 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="beat3" type="Node2D" parent="." unique_id=1304968470]
+[node name="PianoD1" type="AudioStreamPlayer" parent="beat2/D" unique_id=1962978]
+stream = ExtResource("7_scfsd")
+volume_db = -30.0
+
+[node name="beat3" type="Node2D" parent="." unique_id=459080205]
 position = Vector2(375, -18.447)
 scale = Vector2(0.99999994, 0.99999994)
-script = ExtResource("3_vjuo8")
+script = ExtResource("14_qdmxc")
 
-[node name="C" type="TextureButton" parent="beat3" unique_id=2080125944]
+[node name="C" type="TextureButton" parent="beat3" unique_id=1791293528]
 offset_left = -510.1179
 offset_top = 113.354225
 offset_right = -476.0442
@@ -237,11 +256,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="C" type="AudioStreamPlayer" parent="beat3/C" unique_id=707240196]
-stream = ExtResource("5_vjuo8")
-volume_db = 1.0
+[node name="PianoC1" type="AudioStreamPlayer" parent="beat3/C" unique_id=2011085588]
+stream = ExtResource("6_qu1bq")
+volume_db = -30.0
 
-[node name="B" type="TextureButton" parent="beat3" unique_id=104412541]
+[node name="B" type="TextureButton" parent="beat3" unique_id=2083540040]
 offset_left = -508.1426
 offset_top = -97.92498
 offset_right = -474.0689
@@ -252,10 +271,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingB1" type="AudioStreamPlayer" parent="beat3/B" unique_id=1978068376]
-stream = ExtResource("7_qu1bq")
+[node name="PianoB1" type="AudioStreamPlayer" parent="beat3" unique_id=1088847255]
+stream = ExtResource("7_q83ak")
+volume_db = -30.0
 
-[node name="A" type="TextureButton" parent="beat3" unique_id=1682972128]
+[node name="A" type="TextureButton" parent="beat3" unique_id=1625685553]
 offset_left = -508.1426
 offset_top = -61.797157
 offset_right = -474.0689
@@ -266,10 +286,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingA1" type="AudioStreamPlayer" parent="beat3/A" unique_id=7625548]
-stream = ExtResource("8_q83ak")
+[node name="PianoA1" type="AudioStreamPlayer" parent="beat3/A" unique_id=359356030]
+stream = ExtResource("8_xauei")
+volume_db = -30.0
 
-[node name="G" type="TextureButton" parent="beat3" unique_id=282872511]
+[node name="G" type="TextureButton" parent="beat3" unique_id=1345111088]
 offset_left = -507.15497
 offset_top = -26.583961
 offset_right = -473.08127
@@ -280,10 +301,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingG1" type="AudioStreamPlayer" parent="beat3/G" unique_id=934336415]
-stream = ExtResource("7_5psa2")
+[node name="PianoG1" type="AudioStreamPlayer" parent="beat3/G" unique_id=981214791]
+stream = ExtResource("9_kbct2")
+volume_db = -30.0
 
-[node name="F" type="TextureButton" parent="beat3" unique_id=797275580]
+[node name="F" type="TextureButton" parent="beat3" unique_id=1241048999]
 offset_left = -507.64877
 offset_top = 8.171936
 offset_right = -473.57507
@@ -294,10 +316,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingF1" type="AudioStreamPlayer" parent="beat3" unique_id=1763527848]
+[node name="PianoF1" type="AudioStreamPlayer" parent="beat3/F" unique_id=737237198]
 stream = ExtResource("7_h5m60")
+volume_db = -30.0
 
-[node name="E" type="TextureButton" parent="beat3" unique_id=2007830395]
+[node name="E" type="TextureButton" parent="beat3" unique_id=1957657827]
 offset_left = -508.1426
 offset_top = 43.842453
 offset_right = -474.0689
@@ -308,10 +331,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingE1" type="AudioStreamPlayer" parent="beat3/E" unique_id=1361362045]
-stream = ExtResource("7_scfsd")
+[node name="PianoE1" type="AudioStreamPlayer" parent="beat3/E" unique_id=1470554890]
+stream = ExtResource("8_5psa2")
+volume_db = -30.0
 
-[node name="D" type="TextureButton" parent="beat3" unique_id=1841785265]
+[node name="D" type="TextureButton" parent="beat3" unique_id=357827137]
 offset_left = -509.13025
 offset_top = 78.14102
 offset_right = -475.05655
@@ -322,12 +346,16 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="beat4" type="Node2D" parent="." unique_id=893743839]
+[node name="PianoD1" type="AudioStreamPlayer" parent="beat3/D" unique_id=1605076008]
+stream = ExtResource("7_scfsd")
+volume_db = -30.0
+
+[node name="beat4" type="Node2D" parent="." unique_id=748863837]
 position = Vector2(425, -18.447)
 scale = Vector2(0.99999994, 0.99999994)
-script = ExtResource("3_vjuo8")
+script = ExtResource("14_qdmxc")
 
-[node name="C" type="TextureButton" parent="beat4" unique_id=964842189]
+[node name="C" type="TextureButton" parent="beat4" unique_id=1556675947]
 offset_left = -510.1179
 offset_top = 113.354225
 offset_right = -476.0442
@@ -338,11 +366,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="C" type="AudioStreamPlayer" parent="beat4/C" unique_id=612029906]
-stream = ExtResource("5_vjuo8")
-volume_db = 1.0
+[node name="PianoC1" type="AudioStreamPlayer" parent="beat4/C" unique_id=23139128]
+stream = ExtResource("6_qu1bq")
+volume_db = -30.0
 
-[node name="B" type="TextureButton" parent="beat4" unique_id=1256605089]
+[node name="B" type="TextureButton" parent="beat4" unique_id=1689707538]
 offset_left = -508.1426
 offset_top = -97.92498
 offset_right = -474.0689
@@ -353,10 +381,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingB1" type="AudioStreamPlayer" parent="beat4/B" unique_id=1297270693]
-stream = ExtResource("7_qu1bq")
+[node name="PianoB1" type="AudioStreamPlayer" parent="beat4" unique_id=1070361608]
+stream = ExtResource("7_q83ak")
+volume_db = -30.0
 
-[node name="A" type="TextureButton" parent="beat4" unique_id=992675342]
+[node name="A" type="TextureButton" parent="beat4" unique_id=1036567545]
 offset_left = -508.1426
 offset_top = -61.797157
 offset_right = -474.0689
@@ -367,10 +396,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingA1" type="AudioStreamPlayer" parent="beat4/A" unique_id=1792689086]
-stream = ExtResource("8_q83ak")
+[node name="PianoA1" type="AudioStreamPlayer" parent="beat4/A" unique_id=1723626029]
+stream = ExtResource("8_xauei")
+volume_db = -30.0
 
-[node name="G" type="TextureButton" parent="beat4" unique_id=292754938]
+[node name="G" type="TextureButton" parent="beat4" unique_id=1343997996]
 offset_left = -507.15497
 offset_top = -26.583961
 offset_right = -473.08127
@@ -381,10 +411,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingG1" type="AudioStreamPlayer" parent="beat4/G" unique_id=2069395540]
-stream = ExtResource("7_5psa2")
+[node name="PianoG1" type="AudioStreamPlayer" parent="beat4/G" unique_id=511028710]
+stream = ExtResource("9_kbct2")
+volume_db = -30.0
 
-[node name="F" type="TextureButton" parent="beat4" unique_id=1213514005]
+[node name="F" type="TextureButton" parent="beat4" unique_id=1861769175]
 offset_left = -507.64877
 offset_top = 8.171936
 offset_right = -473.57507
@@ -395,10 +426,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingF1" type="AudioStreamPlayer" parent="beat4" unique_id=896244809]
+[node name="PianoF1" type="AudioStreamPlayer" parent="beat4/F" unique_id=1372643143]
 stream = ExtResource("7_h5m60")
+volume_db = -30.0
 
-[node name="E" type="TextureButton" parent="beat4" unique_id=1368162951]
+[node name="E" type="TextureButton" parent="beat4" unique_id=2008727327]
 offset_left = -508.1426
 offset_top = 43.842453
 offset_right = -474.0689
@@ -409,10 +441,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingE1" type="AudioStreamPlayer" parent="beat4/E" unique_id=1557962777]
-stream = ExtResource("7_scfsd")
+[node name="PianoE1" type="AudioStreamPlayer" parent="beat4/E" unique_id=674820128]
+stream = ExtResource("8_5psa2")
+volume_db = -30.0
 
-[node name="D" type="TextureButton" parent="beat4" unique_id=581969855]
+[node name="D" type="TextureButton" parent="beat4" unique_id=869344221]
 offset_left = -509.13025
 offset_top = 78.14102
 offset_right = -475.05655
@@ -423,12 +456,16 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="beat5" type="Node2D" parent="." unique_id=878593156]
+[node name="PianoD1" type="AudioStreamPlayer" parent="beat4/D" unique_id=1245984530]
+stream = ExtResource("7_scfsd")
+volume_db = -30.0
+
+[node name="beat5" type="Node2D" parent="." unique_id=844953014]
 position = Vector2(475, -18.447)
 scale = Vector2(0.99999994, 0.99999994)
-script = ExtResource("3_vjuo8")
+script = ExtResource("14_qdmxc")
 
-[node name="C" type="TextureButton" parent="beat5" unique_id=948500439]
+[node name="C" type="TextureButton" parent="beat5" unique_id=1002610416]
 offset_left = -510.1179
 offset_top = 113.354225
 offset_right = -476.0442
@@ -439,11 +476,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="C" type="AudioStreamPlayer" parent="beat5/C" unique_id=1253625789]
-stream = ExtResource("5_vjuo8")
-volume_db = 1.0
+[node name="PianoC1" type="AudioStreamPlayer" parent="beat5/C" unique_id=782782292]
+stream = ExtResource("6_qu1bq")
+volume_db = -30.0
 
-[node name="B" type="TextureButton" parent="beat5" unique_id=1264434008]
+[node name="B" type="TextureButton" parent="beat5" unique_id=1108352079]
 offset_left = -508.1426
 offset_top = -97.92498
 offset_right = -474.0689
@@ -454,10 +491,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingB1" type="AudioStreamPlayer" parent="beat5/B" unique_id=1669100312]
-stream = ExtResource("7_qu1bq")
+[node name="PianoB1" type="AudioStreamPlayer" parent="beat5/B" unique_id=1272712203]
+stream = ExtResource("7_q83ak")
+volume_db = -30.0
 
-[node name="A" type="TextureButton" parent="beat5" unique_id=1268198838]
+[node name="A" type="TextureButton" parent="beat5" unique_id=1938338349]
 offset_left = -508.1426
 offset_top = -61.797157
 offset_right = -474.0689
@@ -468,10 +506,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingA1" type="AudioStreamPlayer" parent="beat5/A" unique_id=1434210097]
-stream = ExtResource("8_q83ak")
+[node name="PianoA1" type="AudioStreamPlayer" parent="beat5/A" unique_id=45332787]
+stream = ExtResource("8_xauei")
+volume_db = -30.0
 
-[node name="G" type="TextureButton" parent="beat5" unique_id=1321672922]
+[node name="G" type="TextureButton" parent="beat5" unique_id=2101082726]
 offset_left = -507.15497
 offset_top = -26.583961
 offset_right = -473.08127
@@ -482,10 +521,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingG1" type="AudioStreamPlayer" parent="beat5/G" unique_id=1357280554]
-stream = ExtResource("7_5psa2")
+[node name="PianoG1" type="AudioStreamPlayer" parent="beat5/G" unique_id=6130092]
+stream = ExtResource("9_kbct2")
+volume_db = -30.0
 
-[node name="F" type="TextureButton" parent="beat5" unique_id=1408212554]
+[node name="F" type="TextureButton" parent="beat5" unique_id=1531937430]
 offset_left = -507.64877
 offset_top = 8.171936
 offset_right = -473.57507
@@ -496,10 +536,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingF1" type="AudioStreamPlayer" parent="beat5" unique_id=1627635303]
+[node name="PianoF1" type="AudioStreamPlayer" parent="beat5/F" unique_id=314344704]
 stream = ExtResource("7_h5m60")
+volume_db = -30.0
 
-[node name="E" type="TextureButton" parent="beat5" unique_id=1409564523]
+[node name="E" type="TextureButton" parent="beat5" unique_id=460582926]
 offset_left = -508.1426
 offset_top = 43.842453
 offset_right = -474.0689
@@ -510,10 +551,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingE1" type="AudioStreamPlayer" parent="beat5/E" unique_id=799180392]
-stream = ExtResource("7_scfsd")
+[node name="PianoE1" type="AudioStreamPlayer" parent="beat5/E" unique_id=345180559]
+stream = ExtResource("8_5psa2")
+volume_db = -30.0
 
-[node name="D" type="TextureButton" parent="beat5" unique_id=1205415222]
+[node name="D" type="TextureButton" parent="beat5" unique_id=712987142]
 offset_left = -509.13025
 offset_top = 78.14102
 offset_right = -475.05655
@@ -524,12 +566,16 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="beat6" type="Node2D" parent="." unique_id=144907815]
+[node name="PianoD1" type="AudioStreamPlayer" parent="beat5/D" unique_id=663131516]
+stream = ExtResource("7_scfsd")
+volume_db = -30.0
+
+[node name="beat6" type="Node2D" parent="." unique_id=903788835]
 position = Vector2(525, -18.447)
 scale = Vector2(0.99999994, 0.99999994)
-script = ExtResource("3_vjuo8")
+script = ExtResource("14_qdmxc")
 
-[node name="C" type="TextureButton" parent="beat6" unique_id=1062452430]
+[node name="C" type="TextureButton" parent="beat6" unique_id=397145811]
 offset_left = -510.1179
 offset_top = 113.354225
 offset_right = -476.0442
@@ -540,11 +586,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="C" type="AudioStreamPlayer" parent="beat6/C" unique_id=632411362]
-stream = ExtResource("5_vjuo8")
-volume_db = 1.0
+[node name="PianoC1" type="AudioStreamPlayer" parent="beat6/C" unique_id=731176511]
+stream = ExtResource("6_qu1bq")
+volume_db = -30.0
 
-[node name="B" type="TextureButton" parent="beat6" unique_id=1881331318]
+[node name="B" type="TextureButton" parent="beat6" unique_id=1623144023]
 offset_left = -508.1426
 offset_top = -97.92498
 offset_right = -474.0689
@@ -555,10 +601,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingB1" type="AudioStreamPlayer" parent="beat6/B" unique_id=183850305]
-stream = ExtResource("7_qu1bq")
+[node name="PianoB1" type="AudioStreamPlayer" parent="beat6/B" unique_id=327691906]
+stream = ExtResource("7_q83ak")
+volume_db = -30.0
 
-[node name="A" type="TextureButton" parent="beat6" unique_id=152113520]
+[node name="A" type="TextureButton" parent="beat6" unique_id=1615490455]
 offset_left = -508.1426
 offset_top = -61.797157
 offset_right = -474.0689
@@ -569,10 +616,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingA1" type="AudioStreamPlayer" parent="beat6/A" unique_id=40266566]
-stream = ExtResource("8_q83ak")
+[node name="PianoA1" type="AudioStreamPlayer" parent="beat6/A" unique_id=1878563068]
+stream = ExtResource("8_xauei")
+volume_db = -30.0
 
-[node name="G" type="TextureButton" parent="beat6" unique_id=1420985457]
+[node name="G" type="TextureButton" parent="beat6" unique_id=1794479093]
 offset_left = -507.15497
 offset_top = -26.583961
 offset_right = -473.08127
@@ -583,10 +631,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingG1" type="AudioStreamPlayer" parent="beat6/G" unique_id=1976989363]
-stream = ExtResource("7_5psa2")
+[node name="PianoG1" type="AudioStreamPlayer" parent="beat6/G" unique_id=229901686]
+stream = ExtResource("9_kbct2")
+volume_db = -30.0
 
-[node name="F" type="TextureButton" parent="beat6" unique_id=1708816205]
+[node name="F" type="TextureButton" parent="beat6" unique_id=1833532760]
 offset_left = -507.64877
 offset_top = 8.171936
 offset_right = -473.57507
@@ -597,10 +646,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingF1" type="AudioStreamPlayer" parent="beat6" unique_id=35153547]
+[node name="PianoF1" type="AudioStreamPlayer" parent="beat6/F" unique_id=969060956]
 stream = ExtResource("7_h5m60")
+volume_db = -30.0
 
-[node name="E" type="TextureButton" parent="beat6" unique_id=1950983173]
+[node name="E" type="TextureButton" parent="beat6" unique_id=1602720660]
 offset_left = -508.1426
 offset_top = 43.842453
 offset_right = -474.0689
@@ -611,10 +661,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingE1" type="AudioStreamPlayer" parent="beat6/E" unique_id=14124906]
-stream = ExtResource("7_scfsd")
+[node name="PianoE1" type="AudioStreamPlayer" parent="beat6/E" unique_id=778475083]
+stream = ExtResource("8_5psa2")
+volume_db = -30.0
 
-[node name="D" type="TextureButton" parent="beat6" unique_id=1400191074]
+[node name="D" type="TextureButton" parent="beat6" unique_id=658603207]
 offset_left = -509.13025
 offset_top = 78.14102
 offset_right = -475.05655
@@ -625,12 +676,16 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="beat7" type="Node2D" parent="." unique_id=651560660]
+[node name="PianoD1" type="AudioStreamPlayer" parent="beat6/D" unique_id=340244618]
+stream = ExtResource("7_scfsd")
+volume_db = -30.0
+
+[node name="beat7" type="Node2D" parent="." unique_id=471394464]
 position = Vector2(575, -18.447)
 scale = Vector2(0.99999994, 0.99999994)
-script = ExtResource("3_vjuo8")
+script = ExtResource("14_qdmxc")
 
-[node name="C" type="TextureButton" parent="beat7" unique_id=316777325]
+[node name="C" type="TextureButton" parent="beat7" unique_id=74219219]
 offset_left = -510.1179
 offset_top = 113.354225
 offset_right = -476.0442
@@ -641,11 +696,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="C" type="AudioStreamPlayer" parent="beat7/C" unique_id=487492466]
-stream = ExtResource("5_vjuo8")
-volume_db = 1.0
+[node name="PianoC1" type="AudioStreamPlayer" parent="beat7/C" unique_id=1724294265]
+stream = ExtResource("6_qu1bq")
+volume_db = -30.0
 
-[node name="B" type="TextureButton" parent="beat7" unique_id=1224877306]
+[node name="B" type="TextureButton" parent="beat7" unique_id=1172020368]
 offset_left = -508.1426
 offset_top = -97.92498
 offset_right = -474.0689
@@ -656,10 +711,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingB1" type="AudioStreamPlayer" parent="beat7/B" unique_id=727903720]
-stream = ExtResource("7_qu1bq")
+[node name="PianoB1" type="AudioStreamPlayer" parent="beat7/B" unique_id=1690202708]
+stream = ExtResource("7_q83ak")
+volume_db = -30.0
 
-[node name="A" type="TextureButton" parent="beat7" unique_id=429370391]
+[node name="A" type="TextureButton" parent="beat7" unique_id=1369233989]
 offset_left = -508.1426
 offset_top = -61.797157
 offset_right = -474.0689
@@ -670,10 +726,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingA1" type="AudioStreamPlayer" parent="beat7/A" unique_id=947024960]
-stream = ExtResource("8_q83ak")
+[node name="PianoA1" type="AudioStreamPlayer" parent="beat7/A" unique_id=1103049408]
+stream = ExtResource("8_xauei")
+volume_db = -30.0
 
-[node name="G" type="TextureButton" parent="beat7" unique_id=1190926427]
+[node name="G" type="TextureButton" parent="beat7" unique_id=1951556616]
 offset_left = -507.15497
 offset_top = -26.583961
 offset_right = -473.08127
@@ -684,10 +741,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingG1" type="AudioStreamPlayer" parent="beat7/G" unique_id=1304795240]
-stream = ExtResource("7_5psa2")
+[node name="PianoG1" type="AudioStreamPlayer" parent="beat7/G" unique_id=1011820736]
+stream = ExtResource("9_kbct2")
+volume_db = -30.0
 
-[node name="F" type="TextureButton" parent="beat7" unique_id=30123374]
+[node name="F" type="TextureButton" parent="beat7" unique_id=634019030]
 offset_left = -507.64877
 offset_top = 8.171936
 offset_right = -473.57507
@@ -698,10 +756,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingF1" type="AudioStreamPlayer" parent="beat7" unique_id=180007515]
+[node name="PianoF1" type="AudioStreamPlayer" parent="beat7/F" unique_id=44156970]
 stream = ExtResource("7_h5m60")
+volume_db = -30.0
 
-[node name="E" type="TextureButton" parent="beat7" unique_id=2076111672]
+[node name="E" type="TextureButton" parent="beat7" unique_id=789268630]
 offset_left = -508.1426
 offset_top = 43.842453
 offset_right = -474.0689
@@ -712,10 +771,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingE1" type="AudioStreamPlayer" parent="beat7/E" unique_id=1434690874]
-stream = ExtResource("7_scfsd")
+[node name="PianoE1" type="AudioStreamPlayer" parent="beat7/E" unique_id=1044969155]
+stream = ExtResource("8_5psa2")
+volume_db = -30.0
 
-[node name="D" type="TextureButton" parent="beat7" unique_id=1483562982]
+[node name="D" type="TextureButton" parent="beat7" unique_id=671681425]
 offset_left = -509.13025
 offset_top = 78.14102
 offset_right = -475.05655
@@ -726,12 +786,16 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="beat8" type="Node2D" parent="." unique_id=1571386703]
+[node name="PianoD1" type="AudioStreamPlayer" parent="beat7/D" unique_id=1752872262]
+stream = ExtResource("7_scfsd")
+volume_db = -30.0
+
+[node name="beat8" type="Node2D" parent="." unique_id=195490647]
 position = Vector2(625, -18.447)
 scale = Vector2(0.99999994, 0.99999994)
-script = ExtResource("3_vjuo8")
+script = ExtResource("14_qdmxc")
 
-[node name="C" type="TextureButton" parent="beat8" unique_id=1951232526]
+[node name="C" type="TextureButton" parent="beat8" unique_id=1897198724]
 offset_left = -510.1179
 offset_top = 113.354225
 offset_right = -476.0442
@@ -742,11 +806,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="C" type="AudioStreamPlayer" parent="beat8/C" unique_id=1872121013]
-stream = ExtResource("5_vjuo8")
-volume_db = 1.0
+[node name="PianoC1" type="AudioStreamPlayer" parent="beat8/C" unique_id=1182608743]
+stream = ExtResource("6_qu1bq")
+volume_db = -30.0
 
-[node name="B" type="TextureButton" parent="beat8" unique_id=832619601]
+[node name="B" type="TextureButton" parent="beat8" unique_id=11236713]
 offset_left = -508.1426
 offset_top = -97.92498
 offset_right = -474.0689
@@ -757,10 +821,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingB1" type="AudioStreamPlayer" parent="beat8/B" unique_id=370468443]
-stream = ExtResource("7_qu1bq")
+[node name="PianoB1" type="AudioStreamPlayer" parent="beat8/B" unique_id=1892509126]
+stream = ExtResource("7_q83ak")
+volume_db = -30.0
 
-[node name="A" type="TextureButton" parent="beat8" unique_id=1732158871]
+[node name="A" type="TextureButton" parent="beat8" unique_id=616625970]
 offset_left = -508.1426
 offset_top = -61.797157
 offset_right = -474.0689
@@ -771,10 +836,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingA1" type="AudioStreamPlayer" parent="beat8/A" unique_id=637030738]
-stream = ExtResource("8_q83ak")
+[node name="PianoA1" type="AudioStreamPlayer" parent="beat8/A" unique_id=498705031]
+stream = ExtResource("8_xauei")
+volume_db = -30.0
 
-[node name="G" type="TextureButton" parent="beat8" unique_id=1722561833]
+[node name="G" type="TextureButton" parent="beat8" unique_id=1622936909]
 offset_left = -507.15497
 offset_top = -26.583961
 offset_right = -473.08127
@@ -785,10 +851,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingG1" type="AudioStreamPlayer" parent="beat8/G" unique_id=1337107690]
-stream = ExtResource("7_5psa2")
+[node name="PianoG1" type="AudioStreamPlayer" parent="beat8/G" unique_id=37639032]
+stream = ExtResource("9_kbct2")
+volume_db = -30.0
 
-[node name="F" type="TextureButton" parent="beat8" unique_id=1372701537]
+[node name="F" type="TextureButton" parent="beat8" unique_id=1472691885]
 offset_left = -507.64877
 offset_top = 8.171936
 offset_right = -473.57507
@@ -799,10 +866,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingF1" type="AudioStreamPlayer" parent="beat8" unique_id=950200237]
+[node name="PianoF1" type="AudioStreamPlayer" parent="beat8/F" unique_id=504737856]
 stream = ExtResource("7_h5m60")
+volume_db = -30.0
 
-[node name="E" type="TextureButton" parent="beat8" unique_id=579649283]
+[node name="E" type="TextureButton" parent="beat8" unique_id=1373351651]
 offset_left = -508.1426
 offset_top = 43.842453
 offset_right = -474.0689
@@ -813,10 +881,11 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingE1" type="AudioStreamPlayer" parent="beat8/E" unique_id=897353427]
-stream = ExtResource("7_scfsd")
+[node name="PianoE1" type="AudioStreamPlayer" parent="beat8/E" unique_id=1905186918]
+stream = ExtResource("8_5psa2")
+volume_db = -30.0
 
-[node name="D" type="TextureButton" parent="beat8" unique_id=357910632]
+[node name="D" type="TextureButton" parent="beat8" unique_id=206279430]
 offset_left = -509.13025
 offset_top = 78.14102
 offset_right = -475.05655
@@ -827,8 +896,18 @@ texture_pressed = ExtResource("3_w3hss")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="SingD1" type="AudioStreamPlayer" parent="." unique_id=1645706375]
-stream = ExtResource("7_7pdyd")
+[node name="PianoD1" type="AudioStreamPlayer" parent="beat8/D" unique_id=2031997735]
+stream = ExtResource("7_scfsd")
+volume_db = -30.0
+
+[node name="backbutton" type="TextureButton" parent="." unique_id=872061267]
+offset_left = 171.3561
+offset_top = 74.32785
+offset_right = 236.04674
+offset_bottom = 128.29094
+texture_normal = ExtResource("13_q83ak")
+ignore_texture_size = true
+stretch_mode = 0
 
 [connection signal="pressed" from="beat1/C" to="." method="_on_c_pressed"]
 [connection signal="pressed" from="beat1/C" to="beat1" method="_on_c_pressed"]
@@ -894,3 +973,4 @@ stream = ExtResource("7_7pdyd")
 [connection signal="pressed" from="beat8/F" to="beat8" method="_on_f_pressed"]
 [connection signal="pressed" from="beat8/E" to="beat8" method="_on_e_pressed"]
 [connection signal="pressed" from="beat8/D" to="beat8" method="_on_d_pressed"]
+[connection signal="pressed" from="backbutton" to="." method="_on_backbutton_pressed"]

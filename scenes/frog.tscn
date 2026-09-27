@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bcfvxgiol6egw"]
+
+[ext_resource type="Texture2D" uid="uid://cgeiwln7kb72f" path="res://assets/frogman.png" id="1_mqod6"]
+
+[node name="Node2D" type="Node2D" unique_id=1559525687]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1315803189]
+position = Vector2(1042.75, 532.25)
+scale = Vector2(0.45652175, 0.48005697)
+texture = ExtResource("1_mqod6")

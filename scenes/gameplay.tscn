@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://8nhj3k04nbm4"]
 
-[ext_resource type="PackedScene" uid="uid://b5xttrcn4fhne" path="res://scenes/background.tscn" id="1_7biu0"]
+[ext_resource type="PackedScene" uid="uid://b5xttrcn4fhne" path="res://scripts/background.tscn" id="1_7biu0"]
 [ext_resource type="Script" uid="uid://c2g81x5tcqld0" path="res://scripts/gameplay.gd" id="2_00tan"]
 [ext_resource type="Texture2D" uid="uid://brwke36ma2jew" path="res://assets/microphone.png" id="3_ct7aa"]
-[ext_resource type="Script" uid="uid://cwbt6oadxvjat" path="res://scenes/microphone.gd" id="4_ocj2s"]
-[ext_resource type="PackedScene" uid="uid://bvtmxyw48mgh1" path="res://scenes/micrphonedashboard.tscn" id="5_ocj2s"]
-[ext_resource type="AudioStream" uid="uid://gxpkjl851bh5" path="res://music/sing_c1.wav" id="6_din8e"]
+[ext_resource type="Script" uid="uid://cwbt6oadxvjat" path="res://scripts/microphone.gd" id="4_ocj2s"]
+[ext_resource type="PackedScene" uid="uid://bvtmxyw48mgh1" path="res://scenes/pianodash.tscn" id="5_ocj2s"]
+[ext_resource type="Texture2D" uid="uid://cmkvf08thygdd" path="res://assets/piano.png" id="7_e124b"]
+[ext_resource type="Script" uid="uid://dj7xr7swdiivm" path="res://scenes/piano.gd" id="8_101mb"]
+[ext_resource type="PackedScene" uid="uid://b3ufdydpgq2xe" path="res://scenes/micdash.tscn" id="8_e124b"]
+[ext_resource type="PackedScene" uid="uid://1nnvq8sou810" path="res://scenes/frogspawn.tscn" id="9_101mb"]
 
 [node name="Node2D" type="Node2D" unique_id=1651015788]
 script = ExtResource("2_00tan")
@@ -21,11 +24,30 @@ offset_bottom = 341.0
 texture_normal = ExtResource("3_ct7aa")
 script = ExtResource("4_ocj2s")
 
-[node name="Dashboard" parent="." unique_id=1893971836 instance=ExtResource("5_ocj2s")]
-position = Vector2(428, 320)
-scale = Vector2(1.3950456, 1.9408813)
+[node name="Dashboard" parent="Microphone" unique_id=1237130063 instance=ExtResource("8_e124b")]
+position = Vector2(-50.242157, 194.2344)
+scale = Vector2(1.508035, 1.7917008)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=611442750]
-stream = ExtResource("6_din8e")
+[node name="Piano" type="TextureButton" parent="." unique_id=1130752095]
+offset_left = 766.0
+offset_top = 182.0
+offset_right = 979.0
+offset_bottom = 409.0
+texture_normal = ExtResource("7_e124b")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_101mb")
 
-[connection signal="pressed" from="Microphone" to="Dashboard" method="_on_microphone_pressed"]
+[node name="Dashboard" parent="Piano" unique_id=1893971836 instance=ExtResource("5_ocj2s")]
+position = Vector2(-290.00003, 157.99998)
+scale = Vector2(1.5142905, 1.788422)
+
+[node name="frogspawn" parent="." unique_id=1537410883 instance=ExtResource("9_101mb")]
+
+[connection signal="pressed" from="Microphone" to="." method="_on_microphone_pressed"]
+[connection signal="pressed" from="Microphone" to="Microphone/Dashboard" method="_on_microphone_pressed"]
+[connection signal="pressed" from="Microphone" to="Piano" method="_on_microphone_pressed"]
+[connection signal="visibility_changed" from="Microphone/Dashboard" to="." method="_on_dashboard_visibility_changed"]
+[connection signal="visibility_changed" from="Microphone/Dashboard" to="Piano" method="_on_dashboard_visibility_changed"]
+[connection signal="pressed" from="Piano" to="." method="_on_piano_pressed"]
+[connection signal="pressed" from="Piano" to="Piano/Dashboard" method="_on_piano_pressed"]

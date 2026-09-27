@@ -1,0 +1,931 @@
+[gd_scene format=3 uid="uid://b3ufdydpgq2xe"]
+
+[ext_resource type="Texture2D" uid="uid://deeus424uea8m" path="res://assets/dashboard.png" id="1_7e8on"]
+[ext_resource type="Script" uid="uid://dralofpanb36o" path="res://scripts/micrphonedashboard.gd" id="2_hxy7s"]
+[ext_resource type="Script" uid="uid://1qoqk7qi3a5p" path="res://scenes/beat_1.gd" id="3_hrwqp"]
+[ext_resource type="Texture2D" uid="uid://b5kxc5gxvq2cu" path="res://assets/unfilledsquare.png" id="4_8pctx"]
+[ext_resource type="Texture2D" uid="uid://bxjvpsxw6daen" path="res://assets/filledsquare.png" id="5_rprip"]
+[ext_resource type="AudioStream" uid="uid://gxpkjl851bh5" path="res://music/sing_c1.wav" id="6_oylnf"]
+[ext_resource type="AudioStream" uid="uid://8rpbjmr5hwtd" path="res://music/sing_b1.wav" id="7_pp278"]
+[ext_resource type="AudioStream" uid="uid://dmnlsb4l87imp" path="res://music/sing_a1.wav" id="8_51mq3"]
+[ext_resource type="AudioStream" uid="uid://depfqolr5gd8p" path="res://music/sing_g1.wav" id="9_dlbyx"]
+[ext_resource type="AudioStream" uid="uid://44iva0xuo2vt" path="res://music/sing_f1.wav" id="10_r6ha3"]
+[ext_resource type="AudioStream" uid="uid://1dgnd23e3ub5" path="res://music/sing_e1.wav" id="11_f52ff"]
+[ext_resource type="AudioStream" uid="uid://clqha2e1wwhn6" path="res://music/sing_d1.wav" id="12_f5vq6"]
+[ext_resource type="Texture2D" uid="uid://7a6teautquft" path="res://assets/arrow.png" id="13_e2kf0"]
+
+[node name="Dashboard" type="Sprite2D" unique_id=1893971836]
+position = Vector2(582.00006, 316.46878)
+scale = Vector2(2.0250223, 2.18668)
+texture = ExtResource("1_7e8on")
+script = ExtResource("2_hxy7s")
+
+[node name="beat1" type="Node2D" parent="." unique_id=594157536]
+position = Vector2(275.5525, -18.447235)
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("3_hrwqp")
+
+[node name="C" type="TextureButton" parent="beat1" unique_id=1131608109]
+offset_left = -510.1179
+offset_top = 113.354225
+offset_right = -476.0442
+offset_bottom = 143.98412
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="C" type="AudioStreamPlayer" parent="beat1/C" unique_id=1507923238]
+stream = ExtResource("6_oylnf")
+volume_db = 1.0
+
+[node name="B" type="TextureButton" parent="beat1" unique_id=1217488423]
+offset_left = -508.1426
+offset_top = -97.92498
+offset_right = -474.0689
+offset_bottom = -67.29509
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingB1" type="AudioStreamPlayer" parent="beat1/B" unique_id=1354428456]
+stream = ExtResource("7_pp278")
+
+[node name="A" type="TextureButton" parent="beat1" unique_id=463257410]
+offset_left = -508.1426
+offset_top = -61.797157
+offset_right = -474.0689
+offset_bottom = -31.167267
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingA1" type="AudioStreamPlayer" parent="beat1/A" unique_id=1270604989]
+stream = ExtResource("8_51mq3")
+
+[node name="G" type="TextureButton" parent="beat1" unique_id=10378856]
+offset_left = -507.15497
+offset_top = -26.583961
+offset_right = -473.08127
+offset_bottom = 4.045929
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingG1" type="AudioStreamPlayer" parent="beat1/G" unique_id=1267883883]
+stream = ExtResource("9_dlbyx")
+
+[node name="F" type="TextureButton" parent="beat1" unique_id=1775876098]
+offset_left = -507.64877
+offset_top = 8.171936
+offset_right = -473.57507
+offset_bottom = 38.801826
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingF1" type="AudioStreamPlayer" parent="beat1/F" unique_id=951250783]
+stream = ExtResource("10_r6ha3")
+
+[node name="E" type="TextureButton" parent="beat1" unique_id=1905887258]
+offset_left = -508.1426
+offset_top = 43.842453
+offset_right = -474.0689
+offset_bottom = 74.47234
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingE1" type="AudioStreamPlayer" parent="beat1/E" unique_id=1961693584]
+stream = ExtResource("11_f52ff")
+
+[node name="D" type="TextureButton" parent="beat1" unique_id=1395330524]
+offset_left = -509.13025
+offset_top = 78.14102
+offset_right = -475.05655
+offset_bottom = 108.77091
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingD1" type="AudioStreamPlayer" parent="beat1/D" unique_id=1951106345]
+stream = ExtResource("12_f5vq6")
+
+[node name="beat2" type="Node2D" parent="." unique_id=2052931517]
+position = Vector2(325, -18.447)
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("3_hrwqp")
+
+[node name="C" type="TextureButton" parent="beat2" unique_id=1198149828]
+offset_left = -510.1179
+offset_top = 113.354225
+offset_right = -476.0442
+offset_bottom = 143.98412
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="C" type="AudioStreamPlayer" parent="beat2/C" unique_id=58569094]
+stream = ExtResource("6_oylnf")
+volume_db = 1.0
+
+[node name="B" type="TextureButton" parent="beat2" unique_id=640328204]
+offset_left = -508.1426
+offset_top = -97.92498
+offset_right = -474.0689
+offset_bottom = -67.29509
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingB1" type="AudioStreamPlayer" parent="beat2/B" unique_id=1206879470]
+stream = ExtResource("7_pp278")
+
+[node name="A" type="TextureButton" parent="beat2" unique_id=2113333990]
+offset_left = -508.1426
+offset_top = -61.797157
+offset_right = -474.0689
+offset_bottom = -31.167267
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingA1" type="AudioStreamPlayer" parent="beat2/A" unique_id=791106528]
+stream = ExtResource("8_51mq3")
+
+[node name="G" type="TextureButton" parent="beat2" unique_id=1793994798]
+offset_left = -507.15497
+offset_top = -26.583961
+offset_right = -473.08127
+offset_bottom = 4.045929
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingG1" type="AudioStreamPlayer" parent="beat2/G" unique_id=272923466]
+stream = ExtResource("9_dlbyx")
+
+[node name="F" type="TextureButton" parent="beat2" unique_id=364338479]
+offset_left = -507.64877
+offset_top = 8.171936
+offset_right = -473.57507
+offset_bottom = 38.801826
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingF1" type="AudioStreamPlayer" parent="beat2/F" unique_id=1043592706]
+stream = ExtResource("10_r6ha3")
+
+[node name="E" type="TextureButton" parent="beat2" unique_id=50416918]
+offset_left = -508.1426
+offset_top = 43.842453
+offset_right = -474.0689
+offset_bottom = 74.47234
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingE1" type="AudioStreamPlayer" parent="beat2/E" unique_id=825037838]
+stream = ExtResource("11_f52ff")
+
+[node name="D" type="TextureButton" parent="beat2" unique_id=195826673]
+offset_left = -509.13025
+offset_top = 78.14102
+offset_right = -475.05655
+offset_bottom = 108.77091
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingD1" type="AudioStreamPlayer" parent="beat2/D" unique_id=704238046]
+stream = ExtResource("12_f5vq6")
+
+[node name="beat3" type="Node2D" parent="." unique_id=1304968470]
+position = Vector2(375, -18.447)
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("3_hrwqp")
+
+[node name="C" type="TextureButton" parent="beat3" unique_id=2080125944]
+offset_left = -510.1179
+offset_top = 113.354225
+offset_right = -476.0442
+offset_bottom = 143.98412
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="C" type="AudioStreamPlayer" parent="beat3/C" unique_id=707240196]
+stream = ExtResource("6_oylnf")
+volume_db = 1.0
+
+[node name="B" type="TextureButton" parent="beat3" unique_id=104412541]
+offset_left = -508.1426
+offset_top = -97.92498
+offset_right = -474.0689
+offset_bottom = -67.29509
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingB1" type="AudioStreamPlayer" parent="beat3/B" unique_id=1978068376]
+stream = ExtResource("7_pp278")
+
+[node name="A" type="TextureButton" parent="beat3" unique_id=1682972128]
+offset_left = -508.1426
+offset_top = -61.797157
+offset_right = -474.0689
+offset_bottom = -31.167267
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingA1" type="AudioStreamPlayer" parent="beat3/A" unique_id=7625548]
+stream = ExtResource("8_51mq3")
+
+[node name="G" type="TextureButton" parent="beat3" unique_id=282872511]
+offset_left = -507.15497
+offset_top = -26.583961
+offset_right = -473.08127
+offset_bottom = 4.045929
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingG1" type="AudioStreamPlayer" parent="beat3/G" unique_id=934336415]
+stream = ExtResource("9_dlbyx")
+
+[node name="F" type="TextureButton" parent="beat3" unique_id=797275580]
+offset_left = -507.64877
+offset_top = 8.171936
+offset_right = -473.57507
+offset_bottom = 38.801826
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingF1" type="AudioStreamPlayer" parent="beat3/F" unique_id=1763527848]
+stream = ExtResource("10_r6ha3")
+
+[node name="E" type="TextureButton" parent="beat3" unique_id=2007830395]
+offset_left = -508.1426
+offset_top = 43.842453
+offset_right = -474.0689
+offset_bottom = 74.47234
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingE1" type="AudioStreamPlayer" parent="beat3/E" unique_id=1361362045]
+stream = ExtResource("11_f52ff")
+
+[node name="D" type="TextureButton" parent="beat3" unique_id=1841785265]
+offset_left = -509.13025
+offset_top = 78.14102
+offset_right = -475.05655
+offset_bottom = 108.77091
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingD1" type="AudioStreamPlayer" parent="beat3/D" unique_id=173379892]
+stream = ExtResource("12_f5vq6")
+
+[node name="beat4" type="Node2D" parent="." unique_id=893743839]
+position = Vector2(425, -18.447)
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("3_hrwqp")
+
+[node name="C" type="TextureButton" parent="beat4" unique_id=964842189]
+offset_left = -510.1179
+offset_top = 113.354225
+offset_right = -476.0442
+offset_bottom = 143.98412
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="C" type="AudioStreamPlayer" parent="beat4/C" unique_id=612029906]
+stream = ExtResource("6_oylnf")
+volume_db = 1.0
+
+[node name="B" type="TextureButton" parent="beat4" unique_id=1256605089]
+offset_left = -508.1426
+offset_top = -97.92498
+offset_right = -474.0689
+offset_bottom = -67.29509
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingB1" type="AudioStreamPlayer" parent="beat4/B" unique_id=1297270693]
+stream = ExtResource("7_pp278")
+
+[node name="A" type="TextureButton" parent="beat4" unique_id=992675342]
+offset_left = -508.1426
+offset_top = -61.797157
+offset_right = -474.0689
+offset_bottom = -31.167267
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingA1" type="AudioStreamPlayer" parent="beat4/A" unique_id=1792689086]
+stream = ExtResource("8_51mq3")
+
+[node name="G" type="TextureButton" parent="beat4" unique_id=292754938]
+offset_left = -507.15497
+offset_top = -26.583961
+offset_right = -473.08127
+offset_bottom = 4.045929
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingG1" type="AudioStreamPlayer" parent="beat4/G" unique_id=2069395540]
+stream = ExtResource("9_dlbyx")
+
+[node name="F" type="TextureButton" parent="beat4" unique_id=1213514005]
+offset_left = -507.64877
+offset_top = 8.171936
+offset_right = -473.57507
+offset_bottom = 38.801826
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingF1" type="AudioStreamPlayer" parent="beat4/F" unique_id=896244809]
+stream = ExtResource("10_r6ha3")
+
+[node name="E" type="TextureButton" parent="beat4" unique_id=1368162951]
+offset_left = -508.1426
+offset_top = 43.842453
+offset_right = -474.0689
+offset_bottom = 74.47234
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingE1" type="AudioStreamPlayer" parent="beat4/E" unique_id=1557962777]
+stream = ExtResource("11_f52ff")
+
+[node name="D" type="TextureButton" parent="beat4" unique_id=581969855]
+offset_left = -509.13025
+offset_top = 78.14102
+offset_right = -475.05655
+offset_bottom = 108.77091
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingD1" type="AudioStreamPlayer" parent="beat4/D" unique_id=411373558]
+stream = ExtResource("12_f5vq6")
+
+[node name="beat5" type="Node2D" parent="." unique_id=878593156]
+position = Vector2(475, -18.447)
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("3_hrwqp")
+
+[node name="C" type="TextureButton" parent="beat5" unique_id=948500439]
+offset_left = -510.1179
+offset_top = 113.354225
+offset_right = -476.0442
+offset_bottom = 143.98412
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="C" type="AudioStreamPlayer" parent="beat5/C" unique_id=1253625789]
+stream = ExtResource("6_oylnf")
+volume_db = 1.0
+
+[node name="B" type="TextureButton" parent="beat5" unique_id=1264434008]
+offset_left = -508.1426
+offset_top = -97.92498
+offset_right = -474.0689
+offset_bottom = -67.29509
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingB1" type="AudioStreamPlayer" parent="beat5/B" unique_id=1669100312]
+stream = ExtResource("7_pp278")
+
+[node name="A" type="TextureButton" parent="beat5" unique_id=1268198838]
+offset_left = -508.1426
+offset_top = -61.797157
+offset_right = -474.0689
+offset_bottom = -31.167267
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingA1" type="AudioStreamPlayer" parent="beat5/A" unique_id=1434210097]
+stream = ExtResource("8_51mq3")
+
+[node name="G" type="TextureButton" parent="beat5" unique_id=1321672922]
+offset_left = -507.15497
+offset_top = -26.583961
+offset_right = -473.08127
+offset_bottom = 4.045929
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingG1" type="AudioStreamPlayer" parent="beat5/G" unique_id=1357280554]
+stream = ExtResource("9_dlbyx")
+
+[node name="F" type="TextureButton" parent="beat5" unique_id=1408212554]
+offset_left = -507.64877
+offset_top = 8.171936
+offset_right = -473.57507
+offset_bottom = 38.801826
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingF1" type="AudioStreamPlayer" parent="beat5/F" unique_id=1627635303]
+stream = ExtResource("10_r6ha3")
+
+[node name="E" type="TextureButton" parent="beat5" unique_id=1409564523]
+offset_left = -508.1426
+offset_top = 43.842453
+offset_right = -474.0689
+offset_bottom = 74.47234
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingE1" type="AudioStreamPlayer" parent="beat5/E" unique_id=799180392]
+stream = ExtResource("11_f52ff")
+
+[node name="D" type="TextureButton" parent="beat5" unique_id=1205415222]
+offset_left = -509.13025
+offset_top = 78.14102
+offset_right = -475.05655
+offset_bottom = 108.77091
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingD1" type="AudioStreamPlayer" parent="beat5/D" unique_id=1722801212]
+stream = ExtResource("12_f5vq6")
+
+[node name="beat6" type="Node2D" parent="." unique_id=144907815]
+position = Vector2(525, -18.447)
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("3_hrwqp")
+
+[node name="C" type="TextureButton" parent="beat6" unique_id=1062452430]
+offset_left = -510.1179
+offset_top = 113.354225
+offset_right = -476.0442
+offset_bottom = 143.98412
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="C" type="AudioStreamPlayer" parent="beat6/C" unique_id=632411362]
+stream = ExtResource("6_oylnf")
+volume_db = 1.0
+
+[node name="B" type="TextureButton" parent="beat6" unique_id=1881331318]
+offset_left = -508.1426
+offset_top = -97.92498
+offset_right = -474.0689
+offset_bottom = -67.29509
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingB1" type="AudioStreamPlayer" parent="beat6/B" unique_id=183850305]
+stream = ExtResource("7_pp278")
+
+[node name="A" type="TextureButton" parent="beat6" unique_id=152113520]
+offset_left = -508.1426
+offset_top = -61.797157
+offset_right = -474.0689
+offset_bottom = -31.167267
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingA1" type="AudioStreamPlayer" parent="beat6/A" unique_id=40266566]
+stream = ExtResource("8_51mq3")
+
+[node name="G" type="TextureButton" parent="beat6" unique_id=1420985457]
+offset_left = -507.15497
+offset_top = -26.583961
+offset_right = -473.08127
+offset_bottom = 4.045929
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingG1" type="AudioStreamPlayer" parent="beat6/G" unique_id=1976989363]
+stream = ExtResource("9_dlbyx")
+
+[node name="F" type="TextureButton" parent="beat6" unique_id=1708816205]
+offset_left = -507.64877
+offset_top = 8.171936
+offset_right = -473.57507
+offset_bottom = 38.801826
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingF1" type="AudioStreamPlayer" parent="beat6/F" unique_id=35153547]
+stream = ExtResource("10_r6ha3")
+
+[node name="E" type="TextureButton" parent="beat6" unique_id=1950983173]
+offset_left = -508.1426
+offset_top = 43.842453
+offset_right = -474.0689
+offset_bottom = 74.47234
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingE1" type="AudioStreamPlayer" parent="beat6/E" unique_id=14124906]
+stream = ExtResource("11_f52ff")
+
+[node name="D" type="TextureButton" parent="beat6" unique_id=1400191074]
+offset_left = -509.13025
+offset_top = 78.14102
+offset_right = -475.05655
+offset_bottom = 108.77091
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingD1" type="AudioStreamPlayer" parent="beat6/D" unique_id=1911319984]
+stream = ExtResource("12_f5vq6")
+
+[node name="beat7" type="Node2D" parent="." unique_id=651560660]
+position = Vector2(575, -18.447)
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("3_hrwqp")
+
+[node name="C" type="TextureButton" parent="beat7" unique_id=316777325]
+offset_left = -510.1179
+offset_top = 113.354225
+offset_right = -476.0442
+offset_bottom = 143.98412
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="C" type="AudioStreamPlayer" parent="beat7/C" unique_id=487492466]
+stream = ExtResource("6_oylnf")
+volume_db = 1.0
+
+[node name="B" type="TextureButton" parent="beat7" unique_id=1224877306]
+offset_left = -508.1426
+offset_top = -97.92498
+offset_right = -474.0689
+offset_bottom = -67.29509
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingB1" type="AudioStreamPlayer" parent="beat7/B" unique_id=727903720]
+stream = ExtResource("7_pp278")
+
+[node name="A" type="TextureButton" parent="beat7" unique_id=429370391]
+offset_left = -508.1426
+offset_top = -61.797157
+offset_right = -474.0689
+offset_bottom = -31.167267
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingA1" type="AudioStreamPlayer" parent="beat7/A" unique_id=947024960]
+stream = ExtResource("8_51mq3")
+
+[node name="G" type="TextureButton" parent="beat7" unique_id=1190926427]
+offset_left = -507.15497
+offset_top = -26.583961
+offset_right = -473.08127
+offset_bottom = 4.045929
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingG1" type="AudioStreamPlayer" parent="beat7/G" unique_id=1304795240]
+stream = ExtResource("9_dlbyx")
+
+[node name="F" type="TextureButton" parent="beat7" unique_id=30123374]
+offset_left = -507.64877
+offset_top = 8.171936
+offset_right = -473.57507
+offset_bottom = 38.801826
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingF1" type="AudioStreamPlayer" parent="beat7/F" unique_id=180007515]
+stream = ExtResource("10_r6ha3")
+
+[node name="E" type="TextureButton" parent="beat7" unique_id=2076111672]
+offset_left = -508.1426
+offset_top = 43.842453
+offset_right = -474.0689
+offset_bottom = 74.47234
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingE1" type="AudioStreamPlayer" parent="beat7/E" unique_id=1434690874]
+stream = ExtResource("11_f52ff")
+
+[node name="D" type="TextureButton" parent="beat7" unique_id=1483562982]
+offset_left = -509.13025
+offset_top = 78.14102
+offset_right = -475.05655
+offset_bottom = 108.77091
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingD1" type="AudioStreamPlayer" parent="beat7/D" unique_id=924460836]
+stream = ExtResource("12_f5vq6")
+
+[node name="beat8" type="Node2D" parent="." unique_id=1571386703]
+position = Vector2(625, -18.447)
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("3_hrwqp")
+
+[node name="C" type="TextureButton" parent="beat8" unique_id=1951232526]
+offset_left = -510.1179
+offset_top = 113.354225
+offset_right = -476.0442
+offset_bottom = 143.98412
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="C" type="AudioStreamPlayer" parent="beat8/C" unique_id=1872121013]
+stream = ExtResource("6_oylnf")
+volume_db = 1.0
+
+[node name="B" type="TextureButton" parent="beat8" unique_id=832619601]
+offset_left = -508.1426
+offset_top = -97.92498
+offset_right = -474.0689
+offset_bottom = -67.29509
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingB1" type="AudioStreamPlayer" parent="beat8/B" unique_id=370468443]
+stream = ExtResource("7_pp278")
+
+[node name="A" type="TextureButton" parent="beat8" unique_id=1732158871]
+offset_left = -508.1426
+offset_top = -61.797157
+offset_right = -474.0689
+offset_bottom = -31.167267
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingA1" type="AudioStreamPlayer" parent="beat8/A" unique_id=637030738]
+stream = ExtResource("8_51mq3")
+
+[node name="G" type="TextureButton" parent="beat8" unique_id=1722561833]
+offset_left = -507.15497
+offset_top = -26.583961
+offset_right = -473.08127
+offset_bottom = 4.045929
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingG1" type="AudioStreamPlayer" parent="beat8/G" unique_id=1337107690]
+stream = ExtResource("9_dlbyx")
+
+[node name="F" type="TextureButton" parent="beat8" unique_id=1372701537]
+offset_left = -507.64877
+offset_top = 8.171936
+offset_right = -473.57507
+offset_bottom = 38.801826
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingF1" type="AudioStreamPlayer" parent="beat8/F" unique_id=950200237]
+stream = ExtResource("10_r6ha3")
+
+[node name="E" type="TextureButton" parent="beat8" unique_id=579649283]
+offset_left = -508.1426
+offset_top = 43.842453
+offset_right = -474.0689
+offset_bottom = 74.47234
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingE1" type="AudioStreamPlayer" parent="beat8/E" unique_id=897353427]
+stream = ExtResource("11_f52ff")
+
+[node name="D" type="TextureButton" parent="beat8" unique_id=357910632]
+offset_left = -509.13025
+offset_top = 78.14102
+offset_right = -475.05655
+offset_bottom = 108.77091
+toggle_mode = true
+texture_normal = ExtResource("4_8pctx")
+texture_pressed = ExtResource("5_rprip")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SingD1" type="AudioStreamPlayer" parent="beat8/D" unique_id=599045854]
+stream = ExtResource("12_f5vq6")
+
+[node name="SingD1" type="AudioStreamPlayer" parent="." unique_id=1645706375]
+stream = ExtResource("12_f5vq6")
+
+[node name="backbutton" type="TextureButton" parent="." unique_id=872061267]
+offset_left = 171.3561
+offset_top = 74.32785
+offset_right = 236.04674
+offset_bottom = 128.29094
+texture_normal = ExtResource("13_e2kf0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="beat1/C" to="." method="_on_c_pressed"]
+[connection signal="pressed" from="beat1/C" to="beat1" method="_on_c_pressed"]
+[connection signal="pressed" from="beat1/B" to="beat1" method="_on_b_pressed"]
+[connection signal="pressed" from="beat1/A" to="beat1" method="_on_a_pressed"]
+[connection signal="pressed" from="beat1/G" to="beat1" method="_on_g_pressed"]
+[connection signal="pressed" from="beat1/F" to="beat1" method="_on_f_pressed"]
+[connection signal="pressed" from="beat1/E" to="beat1" method="_on_e_pressed"]
+[connection signal="pressed" from="beat1/D" to="beat1" method="_on_d_pressed"]
+[connection signal="pressed" from="beat2/C" to="." method="_on_c_pressed"]
+[connection signal="pressed" from="beat2/C" to="beat2" method="_on_c_pressed"]
+[connection signal="pressed" from="beat2/B" to="beat2" method="_on_b_pressed"]
+[connection signal="pressed" from="beat2/A" to="beat2" method="_on_a_pressed"]
+[connection signal="pressed" from="beat2/G" to="beat2" method="_on_g_pressed"]
+[connection signal="pressed" from="beat2/F" to="beat2" method="_on_f_pressed"]
+[connection signal="pressed" from="beat2/E" to="beat2" method="_on_e_pressed"]
+[connection signal="pressed" from="beat2/D" to="beat2" method="_on_d_pressed"]
+[connection signal="pressed" from="beat3/C" to="." method="_on_c_pressed"]
+[connection signal="pressed" from="beat3/C" to="beat3" method="_on_c_pressed"]
+[connection signal="pressed" from="beat3/B" to="beat3" method="_on_b_pressed"]
+[connection signal="pressed" from="beat3/A" to="beat3" method="_on_a_pressed"]
+[connection signal="pressed" from="beat3/G" to="beat3" method="_on_g_pressed"]
+[connection signal="pressed" from="beat3/F" to="beat3" method="_on_f_pressed"]
+[connection signal="pressed" from="beat3/E" to="beat3" method="_on_e_pressed"]
+[connection signal="pressed" from="beat3/D" to="beat3" method="_on_d_pressed"]
+[connection signal="pressed" from="beat4/C" to="." method="_on_c_pressed"]
+[connection signal="pressed" from="beat4/C" to="beat4" method="_on_c_pressed"]
+[connection signal="pressed" from="beat4/B" to="beat4" method="_on_b_pressed"]
+[connection signal="pressed" from="beat4/A" to="beat4" method="_on_a_pressed"]
+[connection signal="pressed" from="beat4/G" to="beat4" method="_on_g_pressed"]
+[connection signal="pressed" from="beat4/F" to="beat4" method="_on_f_pressed"]
+[connection signal="pressed" from="beat4/E" to="beat4" method="_on_e_pressed"]
+[connection signal="pressed" from="beat4/D" to="beat4" method="_on_d_pressed"]
+[connection signal="pressed" from="beat5/C" to="." method="_on_c_pressed"]
+[connection signal="pressed" from="beat5/C" to="beat5" method="_on_c_pressed"]
+[connection signal="pressed" from="beat5/B" to="beat5" method="_on_b_pressed"]
+[connection signal="pressed" from="beat5/A" to="beat5" method="_on_a_pressed"]
+[connection signal="pressed" from="beat5/G" to="beat5" method="_on_g_pressed"]
+[connection signal="pressed" from="beat5/F" to="beat5" method="_on_f_pressed"]
+[connection signal="pressed" from="beat5/E" to="beat5" method="_on_e_pressed"]
+[connection signal="pressed" from="beat5/D" to="beat5" method="_on_d_pressed"]
+[connection signal="pressed" from="beat6/C" to="." method="_on_c_pressed"]
+[connection signal="pressed" from="beat6/C" to="beat6" method="_on_c_pressed"]
+[connection signal="pressed" from="beat6/B" to="beat6" method="_on_b_pressed"]
+[connection signal="pressed" from="beat6/A" to="beat6" method="_on_a_pressed"]
+[connection signal="pressed" from="beat6/G" to="beat6" method="_on_g_pressed"]
+[connection signal="pressed" from="beat6/F" to="beat6" method="_on_f_pressed"]
+[connection signal="pressed" from="beat6/E" to="beat6" method="_on_e_pressed"]
+[connection signal="pressed" from="beat6/D" to="beat6" method="_on_d_pressed"]
+[connection signal="pressed" from="beat7/C" to="." method="_on_c_pressed"]
+[connection signal="pressed" from="beat7/C" to="beat7" method="_on_c_pressed"]
+[connection signal="pressed" from="beat7/B" to="beat7" method="_on_b_pressed"]
+[connection signal="pressed" from="beat7/A" to="beat7" method="_on_a_pressed"]
+[connection signal="pressed" from="beat7/G" to="beat7" method="_on_g_pressed"]
+[connection signal="pressed" from="beat7/F" to="beat7" method="_on_f_pressed"]
+[connection signal="pressed" from="beat7/E" to="beat7" method="_on_e_pressed"]
+[connection signal="pressed" from="beat7/D" to="beat7" method="_on_d_pressed"]
+[connection signal="pressed" from="beat8/C" to="." method="_on_c_pressed"]
+[connection signal="pressed" from="beat8/C" to="beat8" method="_on_c_pressed"]
+[connection signal="pressed" from="beat8/B" to="beat8" method="_on_b_pressed"]
+[connection signal="pressed" from="beat8/A" to="beat8" method="_on_a_pressed"]
+[connection signal="pressed" from="beat8/G" to="beat8" method="_on_g_pressed"]
+[connection signal="pressed" from="beat8/F" to="beat8" method="_on_f_pressed"]
+[connection signal="pressed" from="beat8/E" to="beat8" method="_on_e_pressed"]
+[connection signal="pressed" from="beat8/D" to="beat8" method="_on_d_pressed"]
+[connection signal="pressed" from="backbutton" to="." method="_on_backbutton_pressed"]

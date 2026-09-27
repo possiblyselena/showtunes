@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://1nnvq8sou810"]
+
+[ext_resource type="Script" uid="uid://mr3rwa26bgn" path="res://scripts/frogspawn.gd" id="1_5kqeq"]
+
+[node name="frogspawn" type="Node2D" unique_id=1537410883]
+script = ExtResource("1_5kqeq")
