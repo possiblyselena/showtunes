@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene format=3 uid="uid://c10bxqxtjxua1"]
 
-[ext_resource type="Script" uid="uid://d1wt4ma6055l8" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_36de5"]
-[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/nodes/dialogue_label/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/nodes/responses_menu/dialogue_responses_menu.gd" id="3_72ixx"]
+[ext_resource type="Script" uid="uid://d1wt4ma6055l8" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_tnhws"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/nodes/dialogue_label/dialogue_label.tscn" id="2_m1kxl"]
+[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/nodes/responses_menu/dialogue_responses_menu.gd" id="3_5lcpq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 content_margin_left = 20.0
@@ -113,7 +113,7 @@ _data = {
 
 [node name="ExampleBalloon" type="CanvasLayer" unique_id=38036521]
 layer = 100
-script = ExtResource("1_36de5")
+script = ExtResource("1_tnhws")
 
 [node name="Balloon" type="Control" parent="." unique_id=154399927]
 unique_name_in_owner = true
@@ -161,7 +161,7 @@ text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1301798052 instance=ExtResource("2_a8ve6")]
+[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1301798052 instance=ExtResource("2_m1kxl")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -190,18 +190,12 @@ grow_vertical = 2
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon/CenterContainer" unique_id=1801308483 node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2
 alignment = 1
-script = ExtResource("3_72ixx")
-response_template = NodePath("ResponseExample")
-
-[node name="ResponseExample" type="Button" parent="Balloon/CenterContainer/ResponsesMenu" unique_id=1446810977]
-visible = false
-layout_mode = 2
-text = "Response example"
+script = ExtResource("3_5lcpq")
+response_template = NodePath("")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1162558754]
 unique_name_in_owner = true

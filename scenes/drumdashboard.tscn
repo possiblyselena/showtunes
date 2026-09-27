@@ -32,6 +32,7 @@ stretch_mode = 0
 
 [node name="Drum" type="AudioStreamPlayer" parent="beat1/drum" unique_id=298700240]
 stream = ExtResource("4_23spx")
+volume_db = 15.0
 
 [node name="hihat" type="TextureButton" parent="beat1" unique_id=1118051507]
 offset_left = -287.0
@@ -63,6 +64,7 @@ stretch_mode = 0
 
 [node name="Drum" type="AudioStreamPlayer" parent="beat2/drum" unique_id=1478874006]
 stream = ExtResource("4_23spx")
+volume_db = 15.0
 
 [node name="hihat" type="TextureButton" parent="beat2" unique_id=45448155]
 offset_left = -287.0
@@ -94,6 +96,7 @@ stretch_mode = 0
 
 [node name="Drum" type="AudioStreamPlayer" parent="beat3/drum" unique_id=1360488382]
 stream = ExtResource("4_23spx")
+volume_db = 15.0
 
 [node name="hihat" type="TextureButton" parent="beat3" unique_id=239547378]
 offset_left = -287.0
@@ -125,6 +128,7 @@ stretch_mode = 0
 
 [node name="Drum" type="AudioStreamPlayer" parent="beat4/drum" unique_id=1149438115]
 stream = ExtResource("4_23spx")
+volume_db = 15.0
 
 [node name="hihat" type="TextureButton" parent="beat4" unique_id=900915851]
 offset_left = -287.0
@@ -156,6 +160,7 @@ stretch_mode = 0
 
 [node name="Drum" type="AudioStreamPlayer" parent="beat5/drum" unique_id=1366840926]
 stream = ExtResource("4_23spx")
+volume_db = 15.0
 
 [node name="hihat" type="TextureButton" parent="beat5" unique_id=1353828710]
 offset_left = -287.0
@@ -187,6 +192,7 @@ stretch_mode = 0
 
 [node name="Drum" type="AudioStreamPlayer" parent="beat6/drum" unique_id=1624013234]
 stream = ExtResource("4_23spx")
+volume_db = 15.0
 
 [node name="hihat" type="TextureButton" parent="beat6" unique_id=17217110]
 offset_left = -287.0
@@ -218,6 +224,7 @@ stretch_mode = 0
 
 [node name="Drum" type="AudioStreamPlayer" parent="beat7/drum" unique_id=537256020]
 stream = ExtResource("4_23spx")
+volume_db = 15.0
 
 [node name="hihat" type="TextureButton" parent="beat7" unique_id=327972529]
 offset_left = -287.0
@@ -249,6 +256,7 @@ stretch_mode = 0
 
 [node name="Drum" type="AudioStreamPlayer" parent="beat8/drum" unique_id=1412294271]
 stream = ExtResource("4_23spx")
+volume_db = 15.0
 
 [node name="hihat" type="TextureButton" parent="beat8" unique_id=570556244]
 offset_left = -287.0

@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene format=3 uid="uid://dujkm18beg2pb"]
 
-[ext_resource type="Script" uid="uid://d1wt4ma6055l8" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_36de5"]
+[ext_resource type="Script" uid="uid://d2j26aw14jcwy" path="res://assets/balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/nodes/dialogue_label/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/nodes/responses_menu/dialogue_responses_menu.gd" id="3_72ixx"]
 
@@ -152,7 +152,6 @@ size_flags_horizontal = 3
 
 [node name="CharacterLabel" type="RichTextLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1567782692]
 unique_name_in_owner = true
-visible = false
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
@@ -190,7 +189,6 @@ grow_vertical = 2
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon/CenterContainer" unique_id=1801308483 node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2
@@ -199,7 +197,6 @@ script = ExtResource("3_72ixx")
 response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/CenterContainer/ResponsesMenu" unique_id=1446810977]
-visible = false
 layout_mode = 2
 text = "Response example"
 

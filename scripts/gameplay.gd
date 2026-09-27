@@ -4,7 +4,12 @@ extends Node2D
 @onready var frog_spawner = %frogspawn
 @onready var spawn_timer = $Node2D/Timer
 
+const balloon_scene = preload("res://dialogue/balloon.tscn")
+
 var sequence_started: bool = false
+
+func _ready() -> void:
+	pass
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not event.is_pressed() or event.is_echo():
@@ -13,36 +18,17 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
 		if not sequence_started:
 			sequence_started = true
-			
-			# 1. Stop this node from EVER processing unhandled input again!
 			set_process_unhandled_input(false)
-			
-			# 2. Mark input as handled for this frame
 			get_viewport().set_input_as_handled()
-			
-			# 3. Start sequence
 			play_dialogue_sequence()
 
 func play_dialogue_sequence() -> void:
-	# Show Tutorial Dialogue
-	DialogueManager.show_example_dialogue_balloon(
-		load("res://dialogue/tutorial.dialogue"), 
-		"start"
-	)
-		
-	# Wait until tutorial finishes
-	await DialogueManager.dialogue_ended
-	
-	# Show Microphone Dialogue immediately after
-	DialogueManager.show_example_dialogue_balloon(
-		load("res://dialogue/microphone.dialogue"), 
-		"start"
-	)
+	var balloon = balloon_scene.instantiate()
+	get_tree().current_scene.add_child(balloon)
+	balloon.start(load("res://dialogue/tutorial.dialogue"), "start")
 
 func _on_dashboard_visibility_changed() -> void:
 	show()
 
-func _on_timer_timeout() -> void:
-	if frog_spawner != null:
-		frog_spawner.spawn_frog()
-		print("frog")
+func _on_finishbutton_pressed() -> void:
+	frog_spawner.spawn_frog()

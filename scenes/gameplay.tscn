@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://cwbt6oadxvjat" path="res://scripts/microphone.gd" id="4_ocj2s"]
 [ext_resource type="PackedScene" uid="uid://cumwyahdehhiu" path="res://scenes/drumdashboard.tscn" id="4_s5y6v"]
 [ext_resource type="PackedScene" uid="uid://bvtmxyw48mgh1" path="res://scenes/pianodash.tscn" id="5_ocj2s"]
+[ext_resource type="Script" uid="uid://cmutdig8dxt36" path="res://scenes/drum.gd" id="6_s5y6v"]
 [ext_resource type="Texture2D" uid="uid://cmkvf08thygdd" path="res://assets/piano.png" id="7_e124b"]
 [ext_resource type="Script" uid="uid://dj7xr7swdiivm" path="res://scripts/piano.gd" id="8_101mb"]
 [ext_resource type="PackedScene" uid="uid://b3ufdydpgq2xe" path="res://scenes/micdash.tscn" id="8_e124b"]
@@ -25,6 +26,7 @@ script = ExtResource("2_qixtg")
 unique_name_in_owner = true
 
 [node name="background" parent="Node2D" unique_id=732154208 instance=ExtResource("1_7biu0")]
+z_index = -10
 script = ExtResource("2_00tan")
 
 [node name="Drum" type="TextureButton" parent="Node2D" unique_id=107426687]
@@ -35,6 +37,7 @@ offset_bottom = 415.0
 texture_normal = ExtResource("3_bhmdk")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("6_s5y6v")
 
 [node name="Dashboard" parent="Node2D/Drum" unique_id=1095453893 instance=ExtResource("4_s5y6v")]
 position = Vector2(360, 229)
@@ -53,6 +56,7 @@ position = Vector2(-21.99997, 199)
 scale = Vector2(1.508035, 1.7917008)
 
 [node name="Piano" type="TextureButton" parent="Node2D" unique_id=1130752095]
+z_index = -1
 offset_left = 766.0
 offset_top = 182.0
 offset_right = 979.0
@@ -63,6 +67,7 @@ stretch_mode = 0
 script = ExtResource("8_101mb")
 
 [node name="Dashboard" parent="Node2D/Piano" unique_id=1893971836 instance=ExtResource("5_ocj2s")]
+z_index = 1
 position = Vector2(-263.99997, 156.00009)
 scale = Vector2(1.5142905, 1.788422)
 
@@ -79,6 +84,13 @@ texture_normal = ExtResource("11_nt65e")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("10_hbo4f")
+
+[node name="Label" type="Label" parent="." unique_id=25334147]
+offset_left = 13.0
+offset_top = 4.0
+offset_right = 301.0
+offset_bottom = 42.0
+text = "press \"space\" for instructions!"
 
 [connection signal="pressed" from="Node2D/Drum" to="Node2D/Drum/Dashboard" method="_on_drum_pressed"]
 [connection signal="pressed" from="Node2D/Microphone" to="." method="_on_microphone_pressed"]
